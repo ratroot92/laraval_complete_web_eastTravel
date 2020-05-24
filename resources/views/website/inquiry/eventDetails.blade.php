@@ -1,0 +1,2 @@
+
+eventdetails page

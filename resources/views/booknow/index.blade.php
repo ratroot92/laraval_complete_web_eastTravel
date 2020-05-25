@@ -52,7 +52,6 @@ height: auto;
 <br />
 <div class="container">
 <div class="row">
-
 <div class="col-md-3 ">
 	<!--PART 4 : LEFT LISTINGS-->
 	<div class="panel-group">
@@ -79,27 +78,20 @@ height: auto;
 										</a>
 									</li>
 									@foreach($cities=DB::table('cities')->orderBy('id','desc')->take(5)->get()->unique('name') as $key=>$city)
-									
-									
 									<div >
-										<input id="city{{$key}}"  value="{{$city->name}}" type="checkbox" >
-										<label for="city{{$key}}">{{$city->name ?? 'NA'}} </label>
+										<input id="city{{$key}}" onClick="getCityNameForSearch(this.value)"  value="{{$city->name}}" type="checkbox" >
+										<label for="city{{$key}}" >{{$city->name ?? 'NA'}} </label>
 									</div>
-									
 									@endforeach
 								</ul>
 							</div>
-							
 							<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_city_btn">view more</a>
 							<div id="more_cities">
 								@foreach($cities=DB::table('cities')->orderBy('id','desc')->skip(5)->take(100)->get()->unique('name') as $key=>$city)
-								
-								
 								<div >
-									<input id="city{{$key}}"  value="{{$city->name}}" type="checkbox" >
-									<label for="city{{$key}}">{{$city->name ?? 'NA'}} </label>
+									<input id="city{{$key}}" onClick="getCityNameForSearch(this.id)"   value="{{$city->name}}" type="checkbox" >
+									<label for="city{{$key}}" >{{$city->name ?? 'NA'}} </label>
 								</div>
-								
 								@endforeach
 								<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s"  id="less_city_btn">view less</a>
 							</div>
@@ -124,7 +116,6 @@ height: auto;
 					<div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
 						<form>
 							<div id="categories">
-								
 								<ul class="" >
 									<li>
 										<a href="/activities/list" style="padding:0px!important;margin:0px!important;color:white; border:none;">
@@ -134,31 +125,22 @@ height: auto;
 											</div>
 										</a>
 									</li>
-									
 									@foreach($categories=DB::table('categories')->orderBy('id','desc')->take(5)->get()->unique('name') as $key=>$category)
-									
-									
 									<div >
 										<input id="category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
 										<label for="category{{$key}}">{{$category->name ?? 'NA'}} </label>
 									</div>
-									
 									@endforeach
 								</ul>
 							</div>
-							
 							<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_category_btn">view more</a>
 							<div id="more_categories">
 								<ul class="" >
-									
 									@foreach($categories=DB::table('categories')->orderBy('id','desc')->skip(5)->take(100)->get()->unique('name') as $key=>$category)
-									
-									
 									<div >
 										<input id="more_category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
 										<label for="more_category{{$key}}">{{$category->name ?? 'NA'}} </label>
 									</div>
-									
 									@endforeach
 								</ul>
 								<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s"  id="less_category_btn">view less</a>
@@ -183,7 +165,6 @@ height: auto;
 					<div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
 						<form>
 							<div id="countries">
-								
 								<ul class="" >
 									<li>
 										<a href="/activities/list" style="padding:0px!important;margin:0px!important;color:white; border:none;"> <div class="checkbox checkbox-info checkbox-circle">
@@ -192,32 +173,23 @@ height: auto;
 										</div>
 									</a>
 								</li>
-								
 								@foreach($counstries=DB::table('countries')->orderBy('id','desc')->take(5)->get()->unique('name') as $key=>$country)
-									
-									
-									<div class="checkbox checkbox-info checkbox-circle">
-										<input id="country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
-										<label for="country{{$key}}">{{$country->name ?? 'NA'}} </label>
-									</div>
-									
-									@endforeach
+								<div class="checkbox checkbox-info checkbox-circle">
+									<input id="country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
+									<label for="country{{$key}}">{{$country->name ?? 'NA'}} </label>
+								</div>
+								@endforeach
 							</ul>
 						</div>
-						
 						<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_country_btn">view more</a>
 						<div id="more_countries">
 							<ul class="" >
-								
 								@foreach($counstries=DB::table('countries')->orderBy('id','desc')->skip(5)->take(100)->get()->unique('name') as $key=>$country)
-									
-									
-									<div class="checkbox checkbox-info checkbox-circle">
-										<input id="more_country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
-										<label for="more_country{{$key}}">{{$country->name ?? 'NA'}} </label>
-									</div>
-									
-									@endforeach
+								<div class="checkbox checkbox-info checkbox-circle">
+									<input id="more_country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
+									<label for="more_country{{$key}}">{{$country->name ?? 'NA'}} </label>
+								</div>
+								@endforeach
 							</ul>
 							<a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s"  id="less_country_btn">view less</a>
 						</div>
@@ -247,7 +219,6 @@ height: auto;
 									<label for="chp51"> €250 - Above </label>
 								</div>
 							</li>
-							
 							<li>
 								<div class="checkbox checkbox-info checkbox-circle">
 									<input id="chp52" class="price styled" value="250"  type="checkbox">
@@ -274,7 +245,6 @@ height: auto;
 							</li>
 						</ul>
 					</form>
-					
 				</div>
 			</div>
 		</div>
@@ -282,6 +252,16 @@ height: auto;
 </div>
 </div>
 <div class="col-md-9 " id="searchRendering">
+<div class="row">
+	<div class="col-md-12 d-flex flex-row justify-content-around align-items-center">
+		<a href="{{route('booknow')}}" id="all" class="all" >ALL</a>
+		<a href="{{route('all_packages')}}" id="packages" class="packages" >Packages</a>
+		<a href="{{route('all_transfers')}}" id="transfers" class="transfers" >Transfers</a>
+		<a href="{{route('all_cruises')}}" id="cruises" class="cruises" >Cruises</a>
+		<a href="{{route('all_daytours')}}" id="daytours" class="daytours" >Day Tours</a>
+		<a href="{{route('all_activities')}}" id="activities" class="activities" >Activities</a>
+	</div>
+</div>
 @foreach($activities as $key=>$item)
 <div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
 	<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
@@ -398,277 +378,140 @@ height: auto;
 					</div>
 				</div>
 			</div>
-			
 			@endforeach
 		</div>
-	
-	<div class="col-md-3"></div>
-
-	<div class="col-md-9 " id="searchRendering">
-		@foreach($cruises as $key=>$item)
-		<!-- <a href="/cruise/detail/{{$item->id}}"> -->
-		<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
-			<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
-				<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
-			</div>
-			<div class="col-md-6" >
-				<div class="trav-list-bod">
-					<a href="/cruise/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
-					font-weight: 700;">{{$item->name}}</h3></a>
-					<p>{!!substr($item->desc,0,150)!!}</p>
+		<div class="col-md-3"></div>
+		<div class="col-md-9 " id="searchRendering">
+			@foreach($cruises as $key=>$item)
+			<!-- <a href="/cruise/detail/{{$item->id}}"> -->
+			<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
+				<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
+					<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
 				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-					@if($item->disc !=0)
-					<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
-					@else
-					<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
-					@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
-					<a href="/cruise/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
-				</span> </div>
-			</div>
-			<div>
-				<div class="trav-ami">
-					<h4>Detail and Includes</h4>
-					<ul>
-						@if(count($icons)>1 )
-						@foreach($icons as $icon )
-						@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
-						<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
-						@else
-						@endif
-						@endforeach
-						@foreach($icons as $icon )
-						@if($icon->name=='hotel' && $icon->fkey==$item->id)
-						<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
-						@else
-						@endif
-						@endforeach
-						@foreach($icons as $icon)
-						@if($icon->name=='transfer' && $icon->fkey==$item->id)
-						<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
-						@else
-						@endif
-						@endforeach
-						@foreach($icons as $icon)
-						@if($icon->name=='days' && $icon->fkey==$item->id)
-						<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
-						@else
-						@endif
-						@endforeach
-						@foreach($icons as $icon)
-						@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
-						<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
-							<span style="font-size: 11px">  Multiple Cities</span>
-							@else
-							@endif
-							@endforeach
-							@foreach($icons as $icon )
-							@if($icon->name=='breakfast' && $icon->fkey==$item->id)
-							<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
-							@else
-							@endif
-							@endforeach
-							@foreach($icons as $icon )
-							@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
-							<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
-							@else
-							@endif
-							@endforeach
-							@foreach($icons as $icon)
-							@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
-							<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
-							@else
-							@endif
-							@endforeach
-							@foreach($icons as $icon)
-							@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
-							<li href="/cruise/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
-							@else
-							@endif
-							@endforeach
-							@foreach($icons as $icon)
-							@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
-							<li href="/cruise/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
-								<span style="font-size: 11px">  Cruiser</span>
-								@else
-								@endif
-								@endforeach
-								@foreach($icons as $icon)
-								@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
-								<li href="/cruise/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
-								@else
-								@endif
-								@endforeach
-								@foreach($icons as $icon)
-								@if($icon->name=='cruise_icon' && $icon->fkey==$item->id)
-								<li href="/cruise/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-cruises-1/64/16-512.png" alt="">
-									<span style="font-size: 11px">  Activity</span>
-									@else
-									@endif
-									@endforeach
-									@else
-									@endif
-									{{-- <span>@if(count($cities)>1)
-										Multiple Cities
-										@else
-										@foreach($cities as $item)
-										{{$item->name}}
-										@endforeach
-									@endif</span> --}}</li>
-								</ul>
-							</div>
-						</div>
+				<div class="col-md-6" >
+					<div class="trav-list-bod">
+						<a href="/cruise/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
+						font-weight: 700;">{{$item->name}}</h3></a>
+						<p>{!!substr($item->desc,0,150)!!}</p>
 					</div>
-					<!-- </a> -->
-					@endforeach
 				</div>
-		
-		
-			<div class="col-md-3"></div>
-	
-				<div class="col-md-9 " id="searchRendering">
-					@foreach($transfers as $key=>$item)
-					<!-- <a href="/transfers/detail/{{$item->id}}"> -->
-					<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
-						
-						<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
-							<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
-						</div>
-						<div class="col-md-6" >
-							<div class="trav-list-bod">
-								<a href="/transfers/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
-								font-weight: 700;">{{$item->name}}</h3></a>
-								<p>{!!substr($item->desc,0,150)!!}</p>
+				<div class="col-md-3">
+					<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
+						@if($item->disc !=0)
+						<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
+						@else
+						<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
+						@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
+						<a href="/cruise/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
+					</span> </div>
+				</div>
+				<div>
+					<div class="trav-ami">
+						<h4>Detail and Includes</h4>
+						<ul>
+							@if(count($icons)>1 )
+							@foreach($icons as $icon )
+							@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
+							<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
+							@else
+							@endif
+							@endforeach
+							@foreach($icons as $icon )
+							@if($icon->name=='hotel' && $icon->fkey==$item->id)
+							<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
+							@else
+							@endif
+							@endforeach
+							@foreach($icons as $icon)
+							@if($icon->name=='transfer' && $icon->fkey==$item->id)
+							<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
+							@else
+							@endif
+							@endforeach
+							@foreach($icons as $icon)
+							@if($icon->name=='days' && $icon->fkey==$item->id)
+							<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
+							@else
+							@endif
+							@endforeach
+							@foreach($icons as $icon)
+							@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
+							<li href="/cruise/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
+								<span style="font-size: 11px">  Multiple Cities</span>
+								@else
+								@endif
+								@endforeach
+								@foreach($icons as $icon )
+								@if($icon->name=='breakfast' && $icon->fkey==$item->id)
+								<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
+								@else
+								@endif
+								@endforeach
+								@foreach($icons as $icon )
+								@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
+								<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
+								@else
+								@endif
+								@endforeach
+								@foreach($icons as $icon)
+								@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
+								<li href="/cruise/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
+								@else
+								@endif
+								@endforeach
+								@foreach($icons as $icon)
+								@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
+								<li href="/cruise/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
+								@else
+								@endif
+								@endforeach
+								@foreach($icons as $icon)
+								@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
+								<li href="/cruise/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
+									<span style="font-size: 11px">  Cruiser</span>
+									@else
+									@endif
+									@endforeach
+									@foreach($icons as $icon)
+									@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
+									<li href="/cruise/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
+									@else
+									@endif
+									@endforeach
+									@foreach($icons as $icon)
+									@if($icon->name=='cruise_icon' && $icon->fkey==$item->id)
+									<li href="/cruise/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-cruises-1/64/16-512.png" alt="">
+										<span style="font-size: 11px">  Activity</span>
+										@else
+										@endif
+										@endforeach
+										@else
+										@endif
+										{{-- <span>@if(count($cities)>1)
+											Multiple Cities
+											@else
+											@foreach($cities as $item)
+											{{$item->name}}
+											@endforeach
+										@endif</span> --}}</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
-							<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-								@if($item->disc !=0)
-								<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
-								@else
-								<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
-								@endif<span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
-								<a href="/transfers/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
-								
-							</span> </div>
-						</div>
-						<div>
-							<div class="trav-ami">
-								<h4>Detail and Includes</h4>
-								<ul>
-									@if(count($icons)>1 )
-									@foreach($icons as $icon )
-									@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
-									<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
-									@else
-									@endif
-									@endforeach
-									@foreach($icons as $icon )
-									@if($icon->name=='hotel' && $icon->fkey==$item->id)
-									<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
-									@else
-									@endif
-									@endforeach
-									@foreach($icons as $icon)
-									@if($icon->name=='transfer' && $icon->fkey==$item->id)
-									<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
-									@else
-									@endif
-									@endforeach
-									@foreach($icons as $icon)
-									@if($icon->name=='days' && $icon->fkey==$item->id)
-									<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
-									@else
-									@endif
-									@endforeach
-									
-									@foreach($icons as $icon)
-									@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
-									<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
-										<span style="font-size: 11px">  Multiple Cities</span>
-										@else
-										@endif
-										@endforeach
-										
-										@foreach($icons as $icon )
-										@if($icon->name=='breakfast' && $icon->fkey==$item->id)
-										<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
-										@else
-										@endif
-										@endforeach
-										@foreach($icons as $icon )
-										@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
-										<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
-										@else
-										@endif
-										@endforeach
-										@foreach($icons as $icon)
-										@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
-										<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
-										@else
-										@endif
-										@endforeach
-										@foreach($icons as $icon)
-										@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
-										<li href="/activity/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
-										@else
-										@endif
-										@endforeach
-										@foreach($icons as $icon)
-										@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
-										<li href="/activity/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
-											<span style="font-size: 11px">  Cruiser</span>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon)
-											@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
-											<li href="/activity/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon)
-											@if($icon->name=='activity_icon' && $icon->fkey==$item->id)
-											<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-activities-1/64/16-512.png" alt="">
-												<span style="font-size: 11px">  Activity</span>
-												@else
-												@endif
-												@endforeach
-												@else
-												@endif
-												{{-- <span>@if(count($cities)>1)
-													Multiple Cities
-													@else
-													@foreach($cities as $item)
-													{{$item->name}}
-													@endforeach
-												@endif</span> --}}</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<!-- </a> -->
-								@endforeach
-								
-							
-						</div>
-				
-
-						<div class="col-md-3"> </div>
-				
-					<div class="col-md-9">
-						@foreach($packages as $key=>$item)
-						<!-- <a href="/packages/detail/{{$item->id}}"> -->
+						<!-- </a> -->
+						@endforeach
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-9 " id="searchRendering">
+						@foreach($transfers as $key=>$item)
+						<!-- <a href="/transfers/detail/{{$item->id}}"> -->
 						<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
-							
 							<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
 								<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
 							</div>
 							<div class="col-md-6" >
 								<div class="trav-list-bod">
-									<a href="/packages/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
+									<a href="/transfers/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
 									font-weight: 700;">{{$item->name}}</h3></a>
 									<p>{!!substr($item->desc,0,150)!!}</p>
 								</div>
@@ -679,9 +522,8 @@ height: auto;
 									<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
 									@else
 									<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
-									@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
-									<a href="/packages/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
-									
+									@endif<span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
+									<a href="/transfers/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
 								</span> </div>
 							</div>
 							<div>
@@ -691,36 +533,35 @@ height: auto;
 										@if(count($icons)>1 )
 										@foreach($icons as $icon )
 										@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
-										<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
+										<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
 										@else
 										@endif
 										@endforeach
 										@foreach($icons as $icon )
 										@if($icon->name=='hotel' && $icon->fkey==$item->id)
-										<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
+										<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
 										@else
 										@endif
 										@endforeach
 										@foreach($icons as $icon)
 										@if($icon->name=='transfer' && $icon->fkey==$item->id)
-										<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
+										<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
 										@else
 										@endif
 										@endforeach
 										@foreach($icons as $icon)
 										@if($icon->name=='days' && $icon->fkey==$item->id)
-										<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
+										<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
 										@else
 										@endif
 										@endforeach
 										@foreach($icons as $icon)
 										@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
-										<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
+										<li href="/activity/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
 											<span style="font-size: 11px">  Multiple Cities</span>
 											@else
 											@endif
 											@endforeach
-											
 											@foreach($icons as $icon )
 											@if($icon->name=='breakfast' && $icon->fkey==$item->id)
 											<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
@@ -760,320 +601,434 @@ height: auto;
 												@endforeach
 												@foreach($icons as $icon)
 												@if($icon->name=='activity_icon' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-packages-1/64/16-512.png" alt="">
+												<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-activities-1/64/16-512.png" alt="">
 													<span style="font-size: 11px">  Activity</span>
 													@else
 													@endif
 													@endforeach
-												</li>
-											</ul>
-											@else
-											@endif
-											{{-- <span>@if(count($cities)>1)
-												Multiple Cities
-												@else
-												@foreach($cities as $item)
-												{{$item->name}}
-												@endforeach
-											@endif</span> --}}
-										</div>
-									</div>
-								</div>
-								@endforeach
-								
-							</div>
-
-							<div class="col-md-3"></div>
-						<div class="col-md-9">
-							@foreach($daytours as $key=>$item)
-							<!-- <a href="/daytour/detail/{{$item->id}}"> -->
-							<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
-								
-								<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
-									<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
-								</div>
-								<div class="col-md-6" >
-									<div class="trav-list-bod">
-										<a href="/daytour/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
-										font-weight: 700;">{{$item->name}}</h3></a>
-										<p>{!!substr($item->desc,0,150)!!}</p>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-										@if($item->disc !=0)
-										<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
-										@else
-										<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
-										@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
-										<a href="/daytour/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
-										
-									</span> </div>
-								</div>
-								<div>
-									<div class="trav-ami">
-										<h4>Detail and Includes</h4>
-										
-										<ul>
-											@if(count($icons)>1 )
-											@foreach($icons as $icon )
-											@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
-											<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon )
-											@if($icon->name=='hotel' && $icon->fkey==$item->id)
-											<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon)
-											@if($icon->name=='transfer' && $icon->fkey==$item->id)
-											<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon)
-											@if($icon->name=='days' && $icon->fkey==$item->id)
-											<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
-											@else
-											@endif
-											@endforeach
-											@foreach($icons as $icon)
-											@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
-											<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
-												<span style="font-size: 11px">  Multiple Cities</span>
-												@else
-												@endif
-												@endforeach
-												
-												@foreach($icons as $icon )
-												@if($icon->name=='breakfast' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
-												@else
-												@endif
-												@endforeach
-												@foreach($icons as $icon )
-												@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
-												@else
-												@endif
-												@endforeach
-												@foreach($icons as $icon)
-												@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
-												@else
-												@endif
-												@endforeach
-												@foreach($icons as $icon)
-												@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
-												@else
-												@endif
-												@endforeach
-												@foreach($icons as $icon)
-												@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
-												<li href="/activity/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
-													<span style="font-size: 11px">  Cruiser</span>
 													@else
 													@endif
-													@endforeach
-													@foreach($icons as $icon)
-													@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
-													<li href="/activity/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
-													@else
-													@endif
-													@endforeach
-													@foreach($icons as $icon)
-													@if($icon->name=='activity_icon' && $icon->fkey==$item->id)
-													<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-daytours-1/64/16-512.png" alt="">
-														<span style="font-size: 11px">  Activity</span>
+													{{-- <span>@if(count($cities)>1)
+														Multiple Cities
 														@else
-														@endif
+														@foreach($cities as $item)
+														{{$item->name}}
 														@endforeach
-													</li>
+													@endif</span> --}}</li>
 												</ul>
-												@else
-												@endif
-												{{-- <span>@if(count($cities)>1)
-													Multiple Cities
-													@else
-													@foreach($cities as $item)
-													{{$item->name}}
-													@endforeach
-												@endif</span> --}}
 											</div>
 										</div>
 									</div>
-									
+									<!-- </a> -->
 									@endforeach
 								</div>
+								<div class="col-md-3"> </div>
+								<div class="col-md-9">
+									@foreach($packages as $key=>$item)
+									<!-- <a href="/packages/detail/{{$item->id}}"> -->
+									<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
+										<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
+											<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
+										</div>
+										<div class="col-md-6" >
+											<div class="trav-list-bod">
+												<a href="/packages/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
+												font-weight: 700;">{{$item->name}}</h3></a>
+												<p>{!!substr($item->desc,0,150)!!}</p>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
+												@if($item->disc !=0)
+												<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
+												@else
+												<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
+												@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
+												<a href="/packages/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
+											</span> </div>
+										</div>
+										<div>
+											<div class="trav-ami">
+												<h4>Detail and Includes</h4>
+												<ul>
+													@if(count($icons)>1 )
+													@foreach($icons as $icon )
+													@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
+													<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
+													@else
+													@endif
+													@endforeach
+													@foreach($icons as $icon )
+													@if($icon->name=='hotel' && $icon->fkey==$item->id)
+													<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
+													@else
+													@endif
+													@endforeach
+													@foreach($icons as $icon)
+													@if($icon->name=='transfer' && $icon->fkey==$item->id)
+													<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
+													@else
+													@endif
+													@endforeach
+													@foreach($icons as $icon)
+													@if($icon->name=='days' && $icon->fkey==$item->id)
+													<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
+													@else
+													@endif
+													@endforeach
+													@foreach($icons as $icon)
+													@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
+													<li href="/packages/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
+														<span style="font-size: 11px">  Multiple Cities</span>
+														@else
+														@endif
+														@endforeach
+														@foreach($icons as $icon )
+														@if($icon->name=='breakfast' && $icon->fkey==$item->id)
+														<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
+														@else
+														@endif
+														@endforeach
+														@foreach($icons as $icon )
+														@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
+														<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
+														@else
+														@endif
+														@endforeach
+														@foreach($icons as $icon)
+														@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
+														<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
+														@else
+														@endif
+														@endforeach
+														@foreach($icons as $icon)
+														@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
+														<li href="/activity/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
+														@else
+														@endif
+														@endforeach
+														@foreach($icons as $icon)
+														@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
+														<li href="/activity/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
+															<span style="font-size: 11px">  Cruiser</span>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon)
+															@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
+															<li href="/activity/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon)
+															@if($icon->name=='activity_icon' && $icon->fkey==$item->id)
+															<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-packages-1/64/16-512.png" alt="">
+																<span style="font-size: 11px">  Activity</span>
+																@else
+																@endif
+																@endforeach
+															</li>
+														</ul>
+														@else
+														@endif
+														{{-- <span>@if(count($cities)>1)
+															Multiple Cities
+															@else
+															@foreach($cities as $item)
+															{{$item->name}}
+															@endforeach
+														@endif</span> --}}
+													</div>
+												</div>
+											</div>
+											@endforeach
+										</div>
+										<div class="col-md-3"></div>
+										<div class="col-md-9">
+											@foreach($daytours as $key=>$item)
+											<!-- <a href="/daytour/detail/{{$item->id}}"> -->
+											<div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
+												<div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
+													<img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
+												</div>
+												<div class="col-md-6" >
+													<div class="trav-list-bod">
+														<a href="/daytour/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
+														font-weight: 700;">{{$item->name}}</h3></a>
+														<p>{!!substr($item->desc,0,150)!!}</p>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
+														@if($item->disc !=0)
+														<div class="hot-page2-alp-r-hot-page-rat pull">{{$item->disc}}%Off</div>
+														@else
+														<div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
+														@endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
+														<a href="/daytour/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
+													</span> </div>
+												</div>
+												<div>
+													<div class="trav-ami">
+														<h4>Detail and Includes</h4>
+														<ul>
+															@if(count($icons)>1 )
+															@foreach($icons as $icon )
+															@if($icon->name=='sightseeing' && $icon->fkey==$item->id)
+															<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon )
+															@if($icon->name=='hotel' && $icon->fkey==$item->id)
+															<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon)
+															@if($icon->name=='transfer' && $icon->fkey==$item->id)
+															<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon)
+															@if($icon->name=='days' && $icon->fkey==$item->id)
+															<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
+															@else
+															@endif
+															@endforeach
+															@foreach($icons as $icon)
+															@if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
+															<li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
+																<span style="font-size: 11px">  Multiple Cities</span>
+																@else
+																@endif
+																@endforeach
+																@foreach($icons as $icon )
+																@if($icon->name=='breakfast' && $icon->fkey==$item->id)
+																<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
+																@else
+																@endif
+																@endforeach
+																@foreach($icons as $icon )
+																@if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
+																<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
+																@else
+																@endif
+																@endforeach
+																@foreach($icons as $icon)
+																@if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
+																<li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
+																@else
+																@endif
+																@endforeach
+																@foreach($icons as $icon)
+																@if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
+																<li href="/activity/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
+																@else
+																@endif
+																@endforeach
+																@foreach($icons as $icon)
+																@if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
+																<li href="/activity/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
+																	<span style="font-size: 11px">  Cruiser</span>
+																	@else
+																	@endif
+																	@endforeach
+																	@foreach($icons as $icon)
+																	@if($icon->name=='flight_icon' && $icon->fkey==$item->id)
+																	<li href="/activity/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
+																	@else
+																	@endif
+																	@endforeach
+																	@foreach($icons as $icon)
+																	@if($icon->name=='activity_icon' && $icon->fkey==$item->id)
+																	<li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-daytours-1/64/16-512.png" alt="">
+																		<span style="font-size: 11px">  Activity</span>
+																		@else
+																		@endif
+																		@endforeach
+																	</li>
+																</ul>
+																@else
+																@endif
+																{{-- <span>@if(count($cities)>1)
+																	Multiple Cities
+																	@else
+																	@foreach($cities as $item)
+																	{{$item->name}}
+																	@endforeach
+																@endif</span> --}}
+															</div>
+														</div>
+													</div>
+													@endforeach
+												</div>
+											</div>
+										</div>
+										@endsection
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+										<script>
+											function getCityNameForSearch(city)
+  											{
+     											 window.location.href = "{{URL::to('booknow/list/city/')}}"+"/"+city;
+  											}
+										$(document).ready(function(){
 
-
-
-
-
-
-							</div>
-						</div>
-						@endsection
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-						<script>
-						$(document).ready(function(){
-						//cities search
-						$('#chp41').on('click',function(){
-						if($('#chp41').prop('checked')) {
-						var city=$('#chp41').val();
-						if(city!='NA'){
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						}
-						else{
-						}
-						}
-						});
-						$('#chp42').on('click',function(){
-						if($('#chp42').prop('checked')) {
-						var city=$('#chp42').val();
-						if(city!='NA'){
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						}
-						else{
-						}
-						}
-						});
-						$('#chp43').on('click',function(){
-						if($('#chp43').prop('checked')) {
-						var city=$('#chp43').val();
-						if(city!='NA'){
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						}
-						else{
-						}
-						}
-						});
-						$('#chp44').on('click',function(){
-						if($('#chp44').prop('checked')) {
-						var city=$('#chp44').val();
-						if(city!='NA'){
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						}
-						else{
-						}
-						}
-						});
-						$('#chp45').on('click',function(){
-						if($('#chp45').prop('checked')) {
-						var city=$('#chp45').val();
-						if(city!='NA'){
-						if(city!='NA'){
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						}
-						}
-						else{
-						}
-						}
-						});
-						//price search
-						$('#chp51').on('click',function(){
-						if($('#chp51').prop('checked')) {
-						var price=$('#chp51').val();
-						window.location.href = "{{URL::to('activities/search1/')}}"+"/"+price;
-						}
-						});
-						$('#chp52').on('click',function(){
-						if($('#chp52').prop('checked')) {
-						var price=$('#chp52').val();
-						window.location.href = "{{URL::to('activities/search2/')}}"+"/"+price;
-						}
-						});
-						$('#chp53').on('click',function(){
-						if($('#chp53').prop('checked')) {
-						var price=$('#chp53').val();
-						window.location.href = "{{URL::to('activities/search3/')}}"+"/"+price;
-						}
-						});
-						$('#chp54').on('click',function(){
-						if($('#chp54').prop('checked')) {
-						var price=$('#chp54').val();
-						window.location.href = "{{URL::to('activities/search4/')}}"+"/"+price;
-						}
-						});
-						$('#chp55').on('click',function(){
-						if($('#chp55').prop('checked')) {
-						var price=$('#chp55').val();
-						window.location.href = "{{URL::to('activities/search5/')}}"+"/"+price;
-						}
-						});
-						//cutom search
-						$('#sbtn1').on('click',function(){
-						var city=$('#input1').val();
-						if(city!=''){
-						window.location.href = "{{URL::to('/activities/customsearch/city')}}"+"/"+city;
-						}
-						else{
-						//alert('City Name Is  Required')
-						}
-						});
-						$('#sbtn2').on('click',function(){
-						var country=$('#input2').val();
-						if(country!=''){
-						window.location.href = "{{URL::to('/activities/customsearch/country')}}"+"/"+country;
-						}
-						else{
-						//alert('Country Name Is  Required')
-						}
-						});
-						$('#sbtn3').on('click',function(){
-						var category=$('#input3').val();
-						if(category!=''){
-						window.location.href = "{{URL::to('/activities/customsearch/category')}}"+"/"+category;
-						}
-						else{
-						//alert('Category Name Is  Required');
-						}
-						});
-						$('#viewCheckbox1').on('click',function(){
-						window.location.href = "{{URL::to('/activities/grid')}}";
-						});
-						$('.countries').on('click',function(){
-						var country=$(this).val();
-						window.location.href = "{{URL::to('activities/customsearch/country/')}}"+"/"+country;
-						})
-						$('#more_countries').hide();
-						$('#more_country_btn').on('click',function(){
-						$('#more_countries').show();
-						$('#more_country_btn').hide();
-						})
-						$('#less_country_btn').on('click',function(){
-						$('#more_country_btn').show();
-						$('#more_countries').hide();
-						})
-						$('.categories').on('click',function(){
-						var category=$(this).val();
-						window.location.href = "{{URL::to('activities/customsearch/category/')}}"+"/"+category;
-						})
-						$('#more_categories').hide();
-						$('#more_category_btn').on('click',function(){
-						$('#more_categories').show();
-						$('#more_category_btn').hide();
-						})
-						$('#less_category_btn').on('click',function(){
-						$('#more_category_btn').show();
-						$('#more_categories').hide();
-						})
-						$('.cities').on('click',function(){
-						var city=$(this).val();
-						window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
-						})
-						$('#more_cities').hide();
-						$('#more_city_btn').on('click',function(){
-						$('#more_cities').show();
-						$('#more_city_btn').hide();
-						})
-						$('#less_city_btn').on('click',function(){
-						$('#more_city_btn').show();
-						$('#more_cities').hide();
-						})
-						});
-						</script>
+										//cities search
+										$('#chp41').on('click',function(){
+											console.log("clicked")
+										if($('#chp41').prop('checked')) {
+										var city=$('#chp41').val();
+										if(city!='NA'){
+										window.location.href = "{{URL::to('booknow/list/city/')}}"+"/"+city;
+										}
+										else{
+										}
+										}
+										});
+										$('#chp42').on('click',function(){
+										if($('#chp42').prop('checked')) {
+										var city=$('#chp42').val();
+										if(city!='NA'){
+										window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
+										}
+										else{
+										}
+										}
+										});
+										$('#chp43').on('click',function(){
+										if($('#chp43').prop('checked')) {
+										var city=$('#chp43').val();
+										if(city!='NA'){
+										window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
+										}
+										else{
+										}
+										}
+										});
+										$('#chp44').on('click',function(){
+										if($('#chp44').prop('checked')) {
+										var city=$('#chp44').val();
+										if(city!='NA'){
+										window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
+										}
+										else{
+										}
+										}
+										});
+										$('#chp45').on('click',function(){
+										if($('#chp45').prop('checked')) {
+										var city=$('#chp45').val();
+										if(city!='NA'){
+										if(city!='NA'){
+										window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
+										}
+										}
+										else{
+										}
+										}
+										});
+										//price search
+										$('#chp51').on('click',function(){
+										if($('#chp51').prop('checked')) {
+										var price=$('#chp51').val();
+										window.location.href = "{{URL::to('activities/search1/')}}"+"/"+price;
+										}
+										});
+										$('#chp52').on('click',function(){
+										if($('#chp52').prop('checked')) {
+										var price=$('#chp52').val();
+										window.location.href = "{{URL::to('activities/search2/')}}"+"/"+price;
+										}
+										});
+										$('#chp53').on('click',function(){
+										if($('#chp53').prop('checked')) {
+										var price=$('#chp53').val();
+										window.location.href = "{{URL::to('activities/search3/')}}"+"/"+price;
+										}
+										});
+										$('#chp54').on('click',function(){
+										if($('#chp54').prop('checked')) {
+										var price=$('#chp54').val();
+										window.location.href = "{{URL::to('activities/search4/')}}"+"/"+price;
+										}
+										});
+										$('#chp55').on('click',function(){
+										if($('#chp55').prop('checked')) {
+										var price=$('#chp55').val();
+										window.location.href = "{{URL::to('activities/search5/')}}"+"/"+price;
+										}
+										});
+										//cutom search
+										$('#sbtn1').on('click',function(){
+										var city=$('#input1').val();
+										if(city!=''){
+										window.location.href = "{{URL::to('/activities/customsearch/city')}}"+"/"+city;
+										}
+										else{
+										//alert('City Name Is  Required')
+										}
+										});
+										$('#sbtn2').on('click',function(){
+										var country=$('#input2').val();
+										if(country!=''){
+										window.location.href = "{{URL::to('/activities/customsearch/country')}}"+"/"+country;
+										}
+										else{
+										//alert('Country Name Is  Required')
+										}
+										});
+										$('#sbtn3').on('click',function(){
+										var category=$('#input3').val();
+										if(category!=''){
+										window.location.href = "{{URL::to('/activities/customsearch/category')}}"+"/"+category;
+										}
+										else{
+										//alert('Category Name Is  Required');
+										}
+										});
+										$('#viewCheckbox1').on('click',function(){
+										window.location.href = "{{URL::to('/booknow/grid')}}";
+										});
+										$('.countries').on('click',function(){
+										var country=$(this).val();
+										window.location.href = "{{URL::to('activities/customsearch/country/')}}"+"/"+country;
+										})
+										$('#more_countries').hide();
+										$('#more_country_btn').on('click',function(){
+										$('#more_countries').show();
+										$('#more_country_btn').hide();
+										})
+										$('#less_country_btn').on('click',function(){
+										$('#more_country_btn').show();
+										$('#more_countries').hide();
+										})
+										$('.categories').on('click',function(){
+										var category=$(this).val();
+										window.location.href = "{{URL::to('activities/customsearch/category/')}}"+"/"+category;
+										})
+										$('#more_categories').hide();
+										$('#more_category_btn').on('click',function(){
+										$('#more_categories').show();
+										$('#more_category_btn').hide();
+										})
+										$('#less_category_btn').on('click',function(){
+										$('#more_category_btn').show();
+										$('#more_categories').hide();
+										})
+										$('.cities').on('click',function(){
+										var city=$(this).val();
+										window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;
+										})
+										$('#more_cities').hide();
+										$('#more_city_btn').on('click',function(){
+										$('#more_cities').show();
+										$('#more_city_btn').hide();
+										})
+										$('#less_city_btn').on('click',function(){
+										$('#more_city_btn').show();
+										$('#more_cities').hide();
+										})
+										});
+										</script>

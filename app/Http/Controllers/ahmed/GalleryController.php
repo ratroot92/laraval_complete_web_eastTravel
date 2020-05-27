@@ -96,7 +96,7 @@ class GalleryController extends Controller
             $image_name = time() . rand(1000, 9999) . "_." . $extension;
             $path       = public_path('/storage/Gallery_Photos/');
             $photo->move($path, $image_name);
-            $photo_path           = 'https://www.dvenza.com/public/storage/Gallery_Photos/' . $image_name;
+            $photo_path           = 'https://www.eastravels.com/neweasttravel/public/storage/Gallery_Photos/' . $image_name;
             $Gallery_photo        = new Gallery_photo;
             $Gallery_photo->title = $title;
             $Gallery_photo->url   = $photo_path;
@@ -128,7 +128,7 @@ class GalleryController extends Controller
         if ($photo) {
 
             $dB_path  = $photo->url;
-            $len      = strlen("https://www.dvenza.com/");
+            $len      = strlen("https://www.eastravels.com/neweasttravel/");
             $new_path = substr($dB_path, $len, strlen($dB_path) - $len);
             unlink($new_path);
 
@@ -172,7 +172,7 @@ class GalleryController extends Controller
             if ($photo) {
 
                 $dB_path  = $photo->url;
-                $len      = strlen("https://www.dvenza.com/");
+                $len      = strlen("https://www.eastravels.com/neweasttravel/");
                 $new_path = substr($dB_path, $len, strlen($dB_path) - $len);
                 unlink($new_path);
 
@@ -187,7 +187,7 @@ class GalleryController extends Controller
                 $image_name = time() . rand(1000, 9999) . "_." . $extension;
                 $path       = public_path('/storage/Gallery_Photos/');
                 $photo->move($path, $image_name);
-                $photo_path = 'https://www.dvenza.com/public/storage/Gallery_Photos/' . $image_name;
+                $photo_path = 'https://www.eastravels.com/neweasttravel/public/storage/Gallery_Photos/' . $image_name;
 
                 $find_update = DB::table('gallery_photos')->where('id', $id)->update([
                     'title' => $title,

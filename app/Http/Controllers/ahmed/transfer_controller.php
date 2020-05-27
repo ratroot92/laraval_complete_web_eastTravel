@@ -92,7 +92,7 @@ $extension                                                          =$img->getCl
 $image_name                                                         =time().rand(1000,9999)."_.".$extension;
 $path                                                               =public_path('/storage/transfers_images/');
 $img->move($path,$image_name);
-$img_path                                                           ='https://www.dvenza.com/public/storage/transfers_images/'.$image_name;
+$img_path                                                           ='https://www.eastravels.com/neweasttravel/public/storage/transfers_images/'.$image_name;
 $newimage                                                           =new Image;
 $newimage->fkey                                                     =$last_transfer_id;
 $newimage->src                                                      =$img_path;
@@ -111,7 +111,7 @@ $extension                                                          =$file->getC
 $file_name                                                          =time().rand(1000,9999)."_.".$extension;
 $path                                                               =public_path('/storage/transfers_files/');
 $file->move($path,$file_name);
-$file_path                                                          ='https://www.dvenza.com/public/storage/transfers_files/'.$file_name;
+$file_path                                                          ='https://www.eastravels.com/neweasttravel/public/storage/transfers_files/'.$file_name;
 $newimage                                                           =new File;
 $newimage->fkey                                                     =$last_transfer_id;
 $newimage->src                                                      =$file_path;
@@ -315,7 +315,7 @@ $all_img                                                            =DB::table('
 ->get();
 foreach($all_img as $fil){
 $db_path                                                            = $fil->src;
-$len                                                                = strlen("https://www.dvenza.com/");
+$len                                                                = strlen("https://www.eastravels.com/neweasttravel/");
 $new_path                                                           = substr($db_path, $len, strlen($db_path)-$len);
 unlink($new_path);
 }
@@ -328,7 +328,7 @@ $extension                                                          =$img->getCl
 $image_name                                                         =time().rand(1000,9999)."_.".$extension;
 $path                                                               =public_path('/storage/transfers_images/');
 $img->move($path,$image_name);
-$img_path                                                           ='https://www.dvenza.com/public/storage/transfers_images/'.$image_name;
+$img_path                                                           ='https://www.eastravels.com/neweasttravel/public/storage/transfers_images/'.$image_name;
 $newimage                                                           =new Image;
 $newimage->fkey                                                     =$updated_transfer_id;
 $newimage->src                                                      =$img_path;
@@ -342,7 +342,7 @@ $all_files                                                          =DB::table('
 ->get();
 foreach($all_files as $fil){
 $db_path                                                            =$fil->src;
-$len                                                                = strlen("https://www.dvenza.com/");
+$len                                                                = strlen("https://www.eastravels.com/neweasttravel/");
 $new_path                                                           = substr($db_path, $len, strlen($db_path)-$len);
 unlink($new_path);
 }
@@ -355,7 +355,7 @@ $extension                                                          =$file->getC
 $file_name                                                          =time().rand(1000,9999)."_.".$extension;
 $path                                                               =public_path('/storage/transfers_files/');
 $file->move($path,$file_name);
-$file_path                                                          ='https://www.dvenza.com/public/storage/transfers_files/'.$file_name;
+$file_path                                                          ='https://www.eastravels.com/neweasttravel/public/storage/transfers_files/'.$file_name;
 $newimage                                                           =new File;
 $newimage->fkey                                                     =$updated_transfer_id;
 $newimage->src                                                      =$file_path;

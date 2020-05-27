@@ -10,7 +10,8 @@ class City extends Model {
 		'fkey', 'name', 'of',
 	];
 
-	public function activity_city() {
-		return $this->hasMany('App\Activity', "fkey", "id");
+	public function activities() {
+		return $this->belongsToMany('App\Activity');
 	}
+
 }

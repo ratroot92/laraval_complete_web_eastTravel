@@ -95,7 +95,7 @@ class activity_controller extends Controller
                     $image_name = time() . rand(1000, 9999) . "_." . $extension;
                     $path       = public_path('/storage/act_images/');
                     $img->move($path, $image_name);
-                    $img_path       = 'https://www.dvenza.com/public/storage/act_images/' . $image_name;
+                    $img_path       = 'https://www.eastravels.com/neweasttravel/public/storage/act_images/' . $image_name;
                     $newimage       = new Image;
                     $newimage->fkey = $last_activity_id;
                     $newimage->src  = $img_path;
@@ -114,7 +114,7 @@ class activity_controller extends Controller
                         $file_name = time() . rand(1000, 9999) . "_." . $extension;
                         $path      = public_path('/storage/act_files/');
                         $file->move($path, $file_name);
-                        $file_path      = 'https://www.dvenza.com/public/storage/act_files/' . $file_name;
+                        $file_path      = 'https://www.eastravels.com/neweasttravel/public/storage/act_files/' . $file_name;
                         $newimage       = new File;
                         $newimage->fkey = $last_activity_id;
                         $newimage->src  = $file_path;
@@ -319,7 +319,7 @@ class activity_controller extends Controller
                     ->get();
                 foreach ($all_img as $fil) {
                     $db_path  = $fil->src;
-                    $len      = strlen("https://www.dvenza.com/");
+                    $len      = strlen("https://www.eastravels.com/neweasttravel/");
                     $new_path = substr($db_path, $len, strlen($db_path) - $len);
                     unlink($new_path);
                 }
@@ -332,7 +332,7 @@ class activity_controller extends Controller
                     $image_name = time() . rand(1000, 9999) . "_." . $extension;
                     $path       = public_path('/storage/act_images/');
                     $img->move($path, $image_name);
-                    $img_path       = 'https://www.dvenza.com/public/storage/act_images/' . $image_name;
+                    $img_path       = 'https://www.eastravels.com/neweasttravel/public/storage/act_images/' . $image_name;
                     $newimage       = new Image;
                     $newimage->fkey = $updated_activity_id;
                     $newimage->src  = $img_path;
@@ -346,7 +346,7 @@ class activity_controller extends Controller
                     ->get();
                 foreach ($all_files as $fil) {
                     $db_path  = $fil->src;
-                    $len      = strlen("https://www.dvenza.com/");
+                    $len      = strlen("https://www.eastravels.com/neweasttravel/");
                     $new_path = substr($db_path, $len, strlen($db_path) - $len);
                     unlink($new_path);
                 }
@@ -359,7 +359,7 @@ class activity_controller extends Controller
                     $file_name = time() . rand(1000, 9999) . "_." . $extension;
                     $path      = public_path('/storage/act_files/');
                     $file->move($path, $file_name);
-                    $file_path      = 'https://www.dvenza.com/public/storage/act_files/' . $file_name;
+                    $file_path      = 'https://www.eastravels.com/neweasttravel/public/storage/act_files/' . $file_name;
                     $newimage       = new File;
                     $newimage->fkey = $updated_activity_id;
                     $newimage->src  = $file_path;
@@ -532,7 +532,7 @@ class activity_controller extends Controller
         if ($all_images->count() > 0) {
             foreach ($all_images as $img) {
                 $db_path  = $img->src;
-                $len      = strlen("https://www.dvenza.com/");
+                $len      = strlen("https://www.eastravels.com/neweasttravel/");
                 $new_path = substr($db_path, $len, strlen($db_path) - $len);
                 unlink($new_path);
             }
@@ -546,7 +546,7 @@ class activity_controller extends Controller
         if ($all_files->count() > 0) {
             foreach ($all_files as $fil) {
                 $db_path  = $fil->src;
-                $len      = strlen("https://www.dvenza.com/");
+                $len      = strlen("https://www.eastravels.com/neweasttravel/");
                 $new_path = substr($db_path, $len, strlen($db_path) - $len);
                 unlink($new_path);
             }

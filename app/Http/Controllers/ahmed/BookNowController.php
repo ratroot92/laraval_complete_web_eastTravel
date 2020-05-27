@@ -5,7 +5,6 @@ namespace App\Http\Controllers\ahmed;
 use App;
 use App\Activity;
 use App\Http\Controllers\Controller;
-use App\Package_Icon;
 use DB;
 
 class BookNowController extends Controller {
@@ -42,15 +41,11 @@ class BookNowController extends Controller {
 
 	public function all_activities() {
 
-		// $activities = DB::table('activities')->get();
-		// $cities     = DB::table('cities')->where('of', '=', 'activity')->get();
-		// $countries  = DB::table('countries')->where('of', '=', 'activity')->get();
-		// $categories = DB::table('categories')->where('of', '=', 'activity')->get();
-		// $collection = collect([$activities, $cities]);
-		$data = Activity::with('getcity')->get();
-
+		$activities = Activity::with('getcity')->paginate(3);
+		$icons      = DB::table('package_icons')->get();
 		return view('booknow/all_activities')->with([
-				'data' => $data,
+				'activities' => $activities,
+				'icons'      => $icons,
 
 			]);
 
@@ -109,22 +104,15 @@ class BookNowController extends Controller {
 
 	public function list_city($city) {
 
-		$activities = DB::table('activities')
-			->join('cities', 'cities.fkey', '=', 'activities.id')
-			->where('cities.name', $city)
-			->select('activities.*')
-			->paginate(3);
-		$icons      = Package_Icon::all();
-		$cities     = DB::table('cities')->select('name')->distinct()->where('of', 'activity')->distinct()->limit('5')->get();
-		$countries  = DB::table('countries')->select('name')->distinct()->where('of', 'activity')->limit('5')->get();
-		$categories = DB::table('categories')->select('name')->distinct()->where('of', 'activity')->limit('5')->get();
-		return view('/booknow/all_activities')->with([
+		$activities = Activity::find(50003)->activity_city;
+		dd($activities->toArray());
+		$icons = DB::table('package_icons')->get();
+		return view('booknow/all_activities')->with([
 				'activities' => $activities,
-				'cities'     => $cities,
-				'countries'  => $countries,
-				'categories' => $categories,
 				'icons'      => $icons,
-				'success'    => 'Results For City  -'.$city]);
+
+			]);
+
 	}
 
 }

@@ -3,55 +3,43 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Image;
-use App\File;
-use App\City;
-use App\Country;
-use App\Category;
-use App\Package_Icon;
 
+class Activity extends Model {
 
-class Activity extends Model
-{
+	public $table         = 'activities';
+	protected $primaryKey = 'id';
 
-	protected $table='activities';
-	 protected $primaryKey = 'id';
+	// public function getimage() {
+	// 	$instance = $this->hasMany(Image::class , 'fkey', 'id');
+	// 	$instance->getQuery()->where('of', '=', 'activity');
+	// 	return $instance;
+	// }
+	// public function getfile() {
+	// 	$instance = $this->hasMany(File::class , 'fkey', 'id');
+	// 	$instance->getQuery()->where('of', '=', 'activity');
+	// 	return $instance;
+	// }
+	// public function getcity() {
+	// 	return $this->hasMany('App\City', 'fkey', 'id');
+	// }
+	// public function cities() {
+	// 	return City::where('fkey', $this->id)->first()->name;
+	// }
 
-     
-     
-      public function getimage(){
-         $instance= $this->hasMany(Image::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
-    }
-     public function getfile(){
-       $instance= $this->hasMany(File::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
-    }
-    public function getcity(){
-        $instance= $this->hasMany(City::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
+	// public function getcountry() {
+	// 	return $this->hasMany('App\Country', 'fkey', 'id');
+	// }
+	// public function getcategory() {
+	// 	return $this->hasMany('App\Category', 'fkey', 'id');
+	// }
 
-    }
-    public function getcountry()
-    {
-        
-        $instance= $this->hasMany(Country::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
-    }
-   public function getcategory()
-    {
-        $instance= $this->hasMany(Category::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
-    }
+	// public function geticons() {
+	// 	$instance = $this->hasMany(Package_Icon::class , 'fkey', 'id');
+	// 	$instance->getQuery()->where('of', '=', 'activity');
+	// 	return $instance;
+	// }
+	public function activity_city() {
+		return $this->belongsToMany('App\City');
+	}
 
-    public function geticons(){
-    	$instance= $this->hasMany(Package_Icon::class,'fkey','id');
-         $instance->getQuery()->where('of','=', 'activity');
-         return $instance;
-    }
 }

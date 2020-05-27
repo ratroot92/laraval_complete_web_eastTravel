@@ -1,0 +1,12 @@
+[25-May-2020 00:17:56 UTC] PHP Warning:  Unterminated comment starting line 372 in /home4/eastrave/public_html/neweasttravel/routes/web.php on line 372
+[25-May-2020 17:35:15 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\Controller as Controller because the name is already in use in /home4/eastrave/public_html/neweasttravel/app/Http/Controllers/ahmed/BookNowController.php on line 12
+[25-May-2020 17:35:28 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\Controller as Controller because the name is already in use in /home4/eastrave/public_html/neweasttravel/app/Http/Controllers/ahmed/BookNowController.php on line 12
+[25-May-2020 18:12:21 UTC] PHP Warning:  Uncaught ErrorException: Object of class stdClass could not be converted to string in /home4/eastrave/public_html/neweasttravel/storage/framework/views/61bed652632b85aaebe0efff3d25c744a66371a2.php:4
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(4096, 'Object of class...', '/home4/eastrave...', 4, Array)
+#1 /home4/eastrave/public_html/neweasttravel/storage/framework/views/61bed652632b85aaebe0efff3d25c744a66371a2.php(4): implode(Array, ',')
+#2 /home4/eastrave/public_html/neweasttravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): include('/home4/eastrave...')
+#3 /home4/eastrave/public_html/neweasttravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home4/eastrave...', Array)
+#4 /home4/eastrave/public_html/neweasttravel/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(36): Illuminate\View\Engines\CompilerEngine->get('/home4/eastrave...', Array) in /home4/eastrave/public_html/neweasttravel/storage/framework/views/61bed652632b85aaebe0efff3d25c744a66371a2.php on line 4
+[25-May-2020 18:12:21 UTC] PHP Fatal error:  Object of class stdClass could not be converted to string in /home4/eastrave/public_html/neweasttravel/storage/framework/views/61bed652632b85aaebe0efff3d25c744a66371a2.php on line 4
+[25-May-2020 18:39:19 UTC] PHP Fatal error:  Cannot use App\Package_Icon as Package_Icon because the name is already in use in /home4/eastrave/public_html/neweasttravel/app/Http/Controllers/ahmed/BookNowController.php on line 14

@@ -67,6 +67,9 @@ function () {
 				'daytours_search'     => $daytours_search,
 				'daytours'            => $daytours]);
 	});
+// Autocomplete cities and countries
+Route::post('autocomplete/fetch', 'ahmed\blog_controller@autocompleteFetch');
+
 //--------------------- G D P R ---------------------
 Route::get('gdpr', function () {
 		return view('website.gdpr');
@@ -592,7 +595,10 @@ Route::get('csrf', function () {
 Route::get('/cities', 'ahmed\SearchController@cities_index');
 /*book now page routes*/
 Route::get('/booknow', 'ahmed\BookNowController@index')->name('booknow');
-Route::get('/booknow/list/city/{city}', 'ahmed\BookNowController@list_city')->name('booknow.list.city');
+Route::get('/booknow/list/city/{city}/{type}', 'ahmed\BookNowController@list_city')->name('booknow.list.city');
+Route::get('/booknow/list/category/{category}/{type}', 'ahmed\BookNowController@list_category')->name('booknow.list.category');
+
+Route::get('/booknow/list/country/{country}/{type}', 'ahmed\BookNowController@list_country')->name('booknow.list.country');
 Route::get('/booknow/all_packages', 'ahmed\BookNowController@all_packages')->name('all_packages');
 Route::get('/booknow/all_activities', 'ahmed\BookNowController@all_activities')->name('all_activities');
 Route::get('/booknow/all_cruises', 'ahmed\BookNowController@all_cruises')->name('all_cruises');

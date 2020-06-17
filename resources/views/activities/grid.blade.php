@@ -1,4 +1,3 @@
-
 @extends('layouts.website')
 @section('content')
 
@@ -14,16 +13,16 @@
 
 </style>
 
-      
+
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12">
-         
+
 <div id="app">
 @include('flash-message')
 @yield('content')
-</div>        
-</div>    
+</div>
+</div>
 </div>
 </div>
 
@@ -51,10 +50,10 @@
   <label>
    GRID VIEW
     <input type="checkbox"  id="viewCheckbox1">
-    <span class="lever"></span> LIST VIEW 
+    <span class="lever"></span> LIST VIEW
   </label>
-</div>{{-- end of switch --}}       
-    </div>    
+</div>{{-- end of switch --}}
+    </div>
     </div>
     </div>
 
@@ -88,26 +87,26 @@
       <ul class="" >
          <ul class="" >
                             <li>
-                           <a href="/activities/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;">   <div class="checkbox checkbox-info checkbox-circle">
+                           <a href="{{ url('/activities/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">   <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="cities city styled" value="all_cities" type="checkbox" >
                                  <label for="">All Cities </label>
                               </div>
                             </a>
                            </li>
          @foreach($cities=DB::table('cities')->where('of','activity')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$city)
-         
+
          <li>
-             
+
             <div class="checkbox checkbox-info checkbox-circle">
                <input id="city{{$key}}" class="cities city styled" value="{{$city->name}}" type="checkbox" >
                <label for="city{{$key}}">{{$city->name ?? 'NA'}} </label>
             </div>
-         
+
          </li>
          @endforeach
       </ul>
    </div>
-   
+
    <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_city_btn">view more</a>
    <div id="more_cities">
       <ul class="" >
@@ -121,7 +120,7 @@
          </li>
          @else
           <p>no more cities</p>
-         
+
          @endif
          @endforeach
       </ul>
@@ -150,7 +149,7 @@
                         <form>
    <div id="categories">
       <ul class="" >
-         <li>   <a href="/activities/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;"> 
+         <li>   <a href="{{ url('/activities/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="categories city styled" value="all_categories" type="checkbox" >
                                  <label for="">All Categories </label>
@@ -158,23 +157,23 @@
                             </a>
                            </li>
          @foreach($categories=DB::table('categories')->where('of','activity')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$category)
-         
+
          <li>
          <div class="checkbox checkbox-info checkbox-circle">
                <input id="category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
                <label for="category{{$key}}">{{$category->name ?? 'NA'}} </label>
             </div>
-       
+
          </li>
          @endforeach
       </ul>
    </div>
-   
+
    <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_category_btn">view more</a>
    <div id="more_categories">
       <ul class="" >
          @foreach($counstries=DB::table('categories')->where('of','activity')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$category)
-         
+
          <li>
             <div class="checkbox checkbox-info checkbox-circle">
                <input id="more_category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
@@ -208,15 +207,15 @@
                         <form>
    <div id="countries">
       <ul class="" >
-       <li> <a href="/activities/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;"> 
+       <li> <a href="{{ url('/activities/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="countries city styled" value="all_countries" type="checkbox" >
                                  <label for="">All Countries </label>
                               </div>
                             </a> </li>
-                         
+
          @foreach($counstries=DB::table('countries')->where('of','activity')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$country)
-         
+
          <li>
             <div class="checkbox checkbox-info checkbox-circle">
                <input id="country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -226,12 +225,12 @@
          @endforeach
       </ul>
    </div>
-   
+
    <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_country_btn">view more</a>
    <div id="more_countries">
       <ul class="" >
          @foreach($counstries=DB::table('countries')->where('of','activity')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$country)
-         
+
          <li>
             <div class="checkbox checkbox-info checkbox-circle">
                <input id="more_country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -269,7 +268,7 @@
                                     <label for="chp51"> €250 - Above </label>
                                  </div>
                               </li>
-                        
+
                               <li>
                                  <div class="checkbox checkbox-info checkbox-circle">
                                     <input id="chp52" class="price styled" value="250"  type="checkbox">
@@ -296,7 +295,7 @@
                               </li>
                            </ul>
                         </form>
-                        
+
                      </div>
                   </div>
                </div>
@@ -307,7 +306,7 @@
 <div class="col-md-9 " id="searchRendering">
 
                  @foreach($activities  as $key=>$item)
-                    <a href="/activity/detail/{{$item->id}}">
+                    <a href="{{ url('/activity/detail')}}/{{$item->id}}">
                     <div class="col-md-6 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
                         <!-- OFFER BRAND -->
                             @if($item->disc!=0)<div class="band"> <img src="{{url('/theme/travel')}}/images/icon/ribbon.png" alt="" /><span class="disc-text">{{$item->disc}}<br>OFF</span></div>
@@ -330,20 +329,20 @@
                                 <h4>{{$item->name}}<span class="v_pl_name" style="color: black">{{$item->country}}</span></h4>
                             </div>
 
-                     
+
                             <div class="col-md-4 col-sm-4 pack_icon">
                                 <ul>
                                     <li>
-                                        <a href="/activity/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/clock.png" alt="Date" title="Tour Timing" /> </a>
+                                        <a href="{{ url('/activity/detail')}}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/clock.png" alt="Date" title="Tour Timing" /> </a>
                                     </li>
                                     <li>
-                                        <a href="/activity/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/info.png" alt="Details" title="View more details" /> </a>
+                                        <a href="{{ url('/activity/detail')}}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/info.png" alt="Details" title="View more details" /> </a>
                                     </li>
                                     <li>
-                                        <a href="/activity/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/price.png" alt="Price" title="Price" /> </a>
+                                        <a href="{{ url('/activity/detail')}}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/price.png" alt="Price" title="Price" /> </a>
                                     </li>
                                     <li>
-                                        <a href="/activity/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/map.png" alt="Location" title="Location" /> </a>
+                                        <a href="{{ url('/activity/detail')}}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/map.png" alt="Location" title="Location" /> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -353,10 +352,10 @@
                     </div>
         </a>
 
-        @endforeach 
-                                         
-</div>{{-- end  col-md-8 --}}       
-</div>    
+        @endforeach
+
+</div>{{-- end  col-md-8 --}}
+</div>
 </div>
 
 
@@ -364,17 +363,17 @@
 <div class="container-fluid">
 <div class="row">
 <div  class="col-md-12">
-            {{$activities->links()}}   
-</div>       
-</div>    
+            {{$activities->links()}}
+</div>
+</div>
 </div>
 
 
 
-          
+
 @endsection
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
    $(document).ready(function(){
 
@@ -389,14 +388,14 @@ window.location.href = "{{URL::to('activities/gridsearch/city/')}}"+"/"+city;
 else{
 
 }
-       
-} 
-      
+
+}
+
     });
 
 
 
- 
+
 $('#chp42').on('click',function(){
 if($('#chp42').prop('checked')) {
 var city=$('#chp42').val();
@@ -407,14 +406,14 @@ window.location.href = "{{URL::to('activities/gridsearch/city/')}}"+"/"+city;
 else{
 
 }
-       
-} 
-      
+
+}
+
 });
 
 
 
- 
+
 $('#chp43').on('click',function(){
 if($('#chp43').prop('checked')) {
 var city=$('#chp43').val();
@@ -424,15 +423,15 @@ window.location.href = "{{URL::to('activities/gridsearch/city/')}}"+"/"+city;
 else{
 
 }
-       
-} 
-      
+
+}
+
 });
 
 
 
 
- 
+
 $('#chp44').on('click',function(){
 if($('#chp44').prop('checked')) {
 var city=$('#chp44').val();
@@ -442,9 +441,9 @@ window.location.href = "{{URL::to('activities/gridsearch/city/')}}"+"/"+city;
 else{
 
 }
-       
-} 
-      
+
+}
+
 });
 
 
@@ -452,7 +451,7 @@ else{
 
 
 
- 
+
 $('#chp45').on('click',function(){
 if($('#chp45').prop('checked')) {
 var city=$('#chp45').val();
@@ -465,59 +464,59 @@ else{
 
 }
 
-       
-} 
-      
+
+}
+
 });
 
 
-  //country search   
+  //country search
 
 
     $('#chp31').on('click',function(){
         if($('#chp31').prop('checked')) {
 var country=$('#chp31').val();
 window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+country;
-       
-} 
-      
+
+}
+
     });
 
 
 
- 
+
 $('#chp32').on('click',function(){
 if($('#chp32').prop('checked')) {
 var country=$('#chp32').val();
 window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+country;
-       
-} 
-      
+
+}
+
 });
 
 
 
- 
+
 $('#chp33').on('click',function(){
 if($('#chp33').prop('checked')) {
 var country=$('#chp33').val();
 window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+country;
-       
-} 
-      
+
+}
+
 });
 
 
 
 
- 
+
 $('#chp34').on('click',function(){
 if($('#chp34').prop('checked')) {
 var country=$('#chp34').val();
 window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+country;
-       
-} 
-      
+
+}
+
 });
 
 
@@ -525,30 +524,30 @@ window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+count
 
 
 
- 
+
 $('#chp35').on('click',function(){
 if($('#chp35').prop('checked')) {
 var country=$('#chp35').val();
 window.location.href = "{{URL::to('activities/gridsearch/country/')}}"+"/"+country;
-       
-} 
-      
+
+}
+
 });
 
 
 
 
 
-  //category serach    
+  //category serach
 
 
     $('#chp21').on('click',function(){
         if($('#chp21').prop('checked')) {
 var category=$('#chp21').val();
 window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+category;
-       
-} 
-      
+
+}
+
     });
 
 
@@ -556,9 +555,9 @@ window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+cate
         if($('#chp22').prop('checked')) {
 var category=$('#chp22').val();
 window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+category;
-       
-} 
-      
+
+}
+
     });
 
 
@@ -569,9 +568,9 @@ window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+cate
         if($('#chp23').prop('checked')) {
 var category=$('#chp23').val();
 window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+category;
-       
-} 
-      
+
+}
+
     });
 
 
@@ -579,10 +578,10 @@ window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+cate
         if($('#chp24').prop('checked')) {
 var category=$('#chp24').val();
 window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+category;
-       
-} 
-      
-    }); 
+
+}
+
+    });
 
 
 
@@ -591,9 +590,9 @@ window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+cate
         if($('#chp25').prop('checked')) {
 var category=$('#chp25').val();
 window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+category;
-       
-} 
-      
+
+}
+
     });
 
 
@@ -612,46 +611,46 @@ window.location.href = "{{URL::to('activities/gridsearch/category/')}}"+"/"+cate
         if($('#chp51').prop('checked')) {
 var price=$('#chp51').val();
 window.location.href = "{{URL::to('activities/gridsearch1/')}}"+"/"+price;
-       
-} 
-      
+
+}
+
     });
 
 
 
- 
+
 $('#chp52').on('click',function(){
 if($('#chp52').prop('checked')) {
 var price=$('#chp52').val();
 window.location.href = "{{URL::to('activities/gridsearch2/')}}"+"/"+price;
-       
-} 
-      
+
+}
+
 });
 
 
 
- 
+
 $('#chp53').on('click',function(){
 if($('#chp53').prop('checked')) {
 var price=$('#chp53').val();
 window.location.href = "{{URL::to('activities/gridsearch3/')}}"+"/"+price;
-       
-} 
-      
+
+}
+
 });
 
 
 
 
- 
+
 $('#chp54').on('click',function(){
 if($('#chp54').prop('checked')) {
 var price=$('#chp54').val();
 window.location.href = "{{URL::to('activities/gridsearch4/')}}"+"/"+price;
-       
-} 
-      
+
+}
+
 });
 
 
@@ -659,17 +658,17 @@ window.location.href = "{{URL::to('activities/gridsearch4/')}}"+"/"+price;
 
 
 
- 
+
 $('#chp55').on('click',function(){
 if($('#chp55').prop('checked')) {
 var price=$('#chp55').val();
 window.location.href = "{{URL::to('activities/gridsearch5/')}}"+"/"+price;
-       
-} 
-      
+
+}
+
 });
 
-//cutom search 
+//cutom search
 
 $('#sbtn1').on('click',function(){
 var city=$('#input1').val();
@@ -677,7 +676,7 @@ if(city!=''){
 window.location.href = "{{URL::to('/activities/gridsearch/city')}}"+"/"+city;
 }
 else{
-alert('City Name Is  Required') 
+alert('City Name Is  Required')
 }
 
 });
@@ -691,7 +690,7 @@ if(country!=''){
 window.location.href = "{{URL::to('/activities/gridsearch/country')}}"+"/"+country;
 }
 else{
-alert('Country Name Is  Required') 
+alert('Country Name Is  Required')
 }
 
 });
@@ -715,8 +714,8 @@ $('#viewCheckbox1').on('click',function(){
 window.location.href = "{{URL::to('/activities/list')}}";
 });
 
- 
-   
+
+
 $('.countries').on('click',function(){
 var country=$(this).val();
 window.location.href = "{{URL::to('activities/customsearch/country/')}}"+"/"+country;
@@ -739,7 +738,7 @@ $('#more_countries').hide();
 
 
 
-  
+
 $('.categories').on('click',function(){
 var category=$(this).val();
 window.location.href = "{{URL::to('activities/customsearch/category/')}}"+"/"+category;
@@ -755,7 +754,7 @@ $('#more_categories').hide();
 })
 
 
-  
+
 $('.cities').on('click',function(){
 var city=$(this).val();
 window.location.href = "{{URL::to('activities/customsearch/city/')}}"+"/"+city;

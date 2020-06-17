@@ -13,7 +13,7 @@ height: auto;
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      
+
       <div id="app">
         @include('flash-message')
         @yield('content')
@@ -71,14 +71,14 @@ height: auto;
               <div id="cities">
                 <ul class="" >
                   <li>
-                    <a href="/packages/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;">   <div class="checkbox checkbox-info checkbox-circle">
+                    <a href="{{ url('/packages/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">   <div class="checkbox checkbox-info checkbox-circle">
                       <input id="" class="cities city styled" value="all_cities" type="checkbox" >
                       <label for="">All Cities </label>
                     </div>
                   </a>
                 </li>
                 @foreach($cities=DB::table('cities')->where('of','package')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$city)
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="city{{$key}}" class="cities city styled" value="{{$city->name}}" type="checkbox" >
@@ -88,7 +88,7 @@ height: auto;
                 @endforeach
               </ul>
             </div>
-            
+
             <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_city_btn">view more</a>
             <div id="more_cities">
               <ul class="" >
@@ -102,7 +102,7 @@ height: auto;
                 </li>
                 @else
                 <p>no more cities</p>
-                
+
                 @endif
                 @endforeach
               </ul>
@@ -131,7 +131,7 @@ height: auto;
           <form>
             <div id="categories">
               <ul class="" >
-                  <li>   <a href="/packages/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;"> 
+                  <li>   <a href="{{ url('/packages/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="categories city styled" value="all_categories" type="checkbox" >
                                  <label for="">All Categories </label>
@@ -139,7 +139,7 @@ height: auto;
                             </a>
                            </li>
                 @foreach($categories=DB::table('categories')->where('of','package')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$category)
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
@@ -149,12 +149,12 @@ height: auto;
                 @endforeach
               </ul>
             </div>
-            
+
             <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_category_btn">view more</a>
             <div id="more_categories">
               <ul class="" >
                 @foreach($counstries=DB::table('categories')->where('of','package')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$category)
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="more_category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
@@ -188,14 +188,14 @@ height: auto;
           <form>
             <div id="countries">
               <ul class="" >
-                <li> <a href="/packages/grid" style="padding:0px!important;margin:0px!important;color:white; border:none;"> 
+                <li> <a href="{{ url('/packages/grid') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="countries city styled" value="all_countries" type="checkbox" >
                                  <label for="">All Countries </label>
                               </div>
                             </a> </li>
                 @foreach($counstries=DB::table('countries')->where('of','package')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$country)
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -205,12 +205,12 @@ height: auto;
                 @endforeach
               </ul>
             </div>
-            
+
             <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_country_btn">view more</a>
             <div id="more_countries">
               <ul class="" >
                 @foreach($counstries=DB::table('countries')->where('of','package')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$country)
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="more_country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -248,7 +248,7 @@ height: auto;
                   <label for="chp51"> €2001 - Above </label>
                 </div>
               </li>
-              
+
               <li>
                 <div class="checkbox checkbox-info checkbox-circle">
                   <input id="chp52" class="price styled" value="2000"  type="checkbox">
@@ -285,7 +285,7 @@ height: auto;
 </div>
 <div class="col-md-9 " id="searchRendering">
 @foreach($packages  as $key=>$item)
-<a href="/packages/detail/{{$item->id}}">
+<a href="{{ url('/packages/detail') }}/{{$item->id}}">
   <div class="col-md-6 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
     <!-- OFFER BRAND -->
     <!-- OFFER BRAND -->
@@ -308,20 +308,20 @@ height: auto;
     <div class="col-md-8 col-sm-8">
       <h4>{{$item->name}}<span class="v_pl_name" style="color: black">{{$item->country}}</span></h4>
     </div>
-    
+
     <div class="col-md-4 col-sm-4 pack_icon">
       <ul>
         <li>
-          <a href="/packages/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/clock.png" alt="Date" title="Tour Timing" /> </a>
+          <a href="{{ url('/packages/detail') }}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/clock.png" alt="Date" title="Tour Timing" /> </a>
         </li>
         <li>
-          <a href="/packages/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/info.png" alt="Details" title="View more details" /> </a>
+          <a href="{{ url('/packages/detail') }}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/info.png" alt="Details" title="View more details" /> </a>
         </li>
         <li>
-          <a href="/packages/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/price.png" alt="Price" title="Price" /> </a>
+          <a href="{{ url('/packages/detail') }}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/price.png" alt="Price" title="Price" /> </a>
         </li>
         <li>
-          <a href="/packages/detail/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/map.png" alt="Location" title="Location" /> </a>
+          <a href="{{ url('/packages/detail') }}/{{$item->id}}"><img src="{{url('/theme/travel')}}/images/map.png" alt="Location" title="Location" /> </a>
         </li>
       </ul>
     </div>

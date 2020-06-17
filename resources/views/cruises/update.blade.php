@@ -9,7 +9,7 @@
               <li class="active-bre"><a href="{{route('cruise.view')}}"> All Activities</a>
               </li>
               <li class="active-bre"><a href="{{route('cruise.add')}}"> Add New cruise</a></li>
-            
+
               <li class="active-bre"><a href="{{route('cruise.category')}}">All cruise Categories</a>
               <li class="active-bre"><a href="{{route('cruise.addcategory')}}">Add cruise Categories</a>
               <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
@@ -31,8 +31,8 @@
          <li>{{ $error }}</li>
      @endforeach
 </ul>
-</div>        
-</div>    
+</div>
+</div>
 </div>
 </div>
 
@@ -64,7 +64,7 @@
 
 
 
-{{-- 
+{{--
         <div class="row">
             <div class="input-field col s12">
                 <input id="city" name="city" type="text" name="city" class="validate" value="{{$cruise->city}}"  required/>
@@ -124,7 +124,7 @@
 
 
 
-{{-- 
+{{--
 
         <div class="row">
             <div class="input-field col s12">
@@ -141,7 +141,7 @@
 
 
 
-            
+
         </div> --}}
 
 
@@ -199,7 +199,7 @@
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" placeholder="Upload Images" />
                     </div>
-                  
+
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
 
 
 
-        
+
 
 
 
@@ -222,7 +222,7 @@
 
         <div class="input-field col s12">
             <input type="text" class="form-control" name="duration" id="duration" placeholder="5 Days" value="{{$cruise->duration}}" required/>
-    
+
             <label for="duration">Duration</label>
         </div>
 </div>
@@ -252,7 +252,7 @@
             </div>
         </div>
 
-  
+
 
         <div class="row">
             <div class="input-field col s12">
@@ -305,12 +305,12 @@
             <label for="tourlanguage">Tour Languages </label>
         </div>
 </div>
-   
 
 
 
 
-      
+
+
 
 
 
@@ -360,7 +360,6 @@
 
 
 
-       
 
 
 
@@ -368,7 +367,8 @@
 
 
 
-        
+
+
         <div class="row">
             <br>
             <label for="textarea1">Tour Code        </label>
@@ -381,13 +381,13 @@
 
 
 
-      
 
 
 
-      
 
-     
+
+
+
 
 
         <div class="row">
@@ -399,7 +399,7 @@
         </div>
 
 
-         
+
 
 
 
@@ -416,7 +416,7 @@
 
 <!--        <div class="input-field col s12">-->
 <!--            <input type="text" class="validate" id="tourlanguage"  name="tourlanguage" placeholder="English" value="{{$cruise->tourlanguage}}" required="required"/>-->
-         
+
 <!--            <label for="tourlanguage">Tour Languages </label>-->
 <!--        </div>-->
 <!--</div>-->
@@ -454,8 +454,8 @@
 
 
 
-          
-  
+
+
 <div class="row">
             <br>
             <label for="textarea1">Description</label>
@@ -465,8 +465,8 @@
         </div>
 
 
-          
-  
+
+
 <!--<div class="row">-->
 <!--            <br>-->
 <!--            <label for="textarea1">About The Tour</label>-->
@@ -654,7 +654,7 @@
 
 
 
-       
+
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="" class="materialize-textarea" name="code" id="code" placeholder='<iframe id="regiondo-booking-widget" data-width="338px" data-url="https://eastravels.regiondo.com/bookingwidget/vendor/23641/id/94437" data-title="Berlin in 7 Days" style="margin: 0px; padding: 0px; overflow: hidden; vertical-align: top; border: 0px; background: transparent; width: 338px; height: 455px;" data-processed="1" frameborder="0" src="https://eastravels.regiondo.com/bookingwidget/vendor/23641/id/94437?bookingwidget=1&amp;secure=1" data-id="1"></iframe>' /required>{{$cruise->code}}</textarea>
@@ -684,7 +684,7 @@
 </div>
 
 
-    
+
 
 
 

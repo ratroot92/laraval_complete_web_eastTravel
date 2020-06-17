@@ -195,7 +195,7 @@ $path="../public/";
                                 </li>
                                 <!--<li><a href="#"><a href="mailto:info@eastravels.com">info@eastravels.com</a></a>-->
                                 <!--</li>-->
-                                <li><a href="/contact/policy">Contact us</a>
+                                <li><a href="{{ url('contact/policy') }}">Contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -249,6 +249,7 @@ $path="../public/";
                     <li><a href="{{route('events.show')}}">Events</a></li>
                     <li><a href="{{url('/aboutus')}}">About us</a></li>
                     <li><a href="{{url('/custominquiry')}}">Custom Inquiry</a></li>
+                     <li><a href="{{url('/booknow')}}">Booknow</a></li>
                 </ul>
             </div>
         </div>
@@ -262,6 +263,14 @@ $path="../public/";
 <!--====== FOOTER 2 ==========-->
 <section>
 <div class="rows">
+    <div class="form-group">
+    <p>Ajax Autocomplete</p>
+    <input type="text" name="country_name" id="country_name" placeholder="enter country name " class="form-control" />
+    <div id="country_list">
+        <ul class="dropdown-menu"  style="display:block;position:relative"><li><a href="#">China</a></li></ul>
+    </div>
+    {{ csrf_field() }}
+</div>
 <div class="footer">
     <div class="container">
         <br><br>
@@ -386,8 +395,8 @@ $path="../public/";
                         <ul>
                             <li><a href="https://www.facebook.com/Eastravels/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>{{--English--}}</a>
                         </li>
-                        <li><a href="https://www.gmail.com/easttravels/" target="_blank" class=""><i class="fa fa-google-plus" style="margin-right: 3px" aria-hidden="true"></i>{{--الْعَرَبِيَّة--}}</a> </li>
-                        <li><a href="https://www.twitter.com/east_travel/" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i>{{--English--}}</a> </li>
+                       {{--  <li><a href="https://www.gmail.com/easttravels/" target="_blank" class=""><i class="fa fa-google-plus" style="margin-right: 3px" aria-hidden="true"></i></a> </li> --}}
+                        <li><a href="https://www.twitter.com/Eastravels1/" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i>{{--English--}}</a> </li>
                         <li><a href="https://www.linkedin.com/company/easttravels" target="_blank" class=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
                         <li><a href="https://www.youtube.com/eastravel.arabic" target="_blank" ><i class="fa fa-youtube" aria-hidden="true"></i>{{--الْعَرَبِيَّة--}}</a> </li>
                     </ul>
@@ -422,8 +431,27 @@ $path="../public/";
 </section>
 <!--========= Scripts ===========-->
 <script src="{{url('/theme/travel')}}/js/jquery-latest.min.js"></script>
-{{-- --}}
-<script src="{{url('/theme/travel')}}/js/bootstrap.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            console.log("function ready ")
+            $('#country_name').keyup(function(){
+                var query =$(this).val();
+                if(query!=''){
+                    var _token=$('input[name="_token"]').val();
+                    $.ajax({
+                        url:"{{ url('autocomplete/fetch') }}",
+                        method:"POST",
+                        data:{query:query,_token:_token},
+                        success:function(data){
+                            $('#country_list').fadeIn();
+                            $('#country_list').html(data)
+                        }
+                    })
+                }
+            })
+        })
+    </script><script src="{{url('/theme/travel')}}/js/bootstrap.js"></script>
 <script src="{{url('/theme/travel')}}/js/wow.min.js"></script>
 <script src="{{url('/theme/travel')}}/js/materialize.min.js"></script>
 <script src="{{url('/theme/travel')}}/js/custom.js"></script>
@@ -467,5 +495,35 @@ pageLanguage: 'en', includedLanguages: 'en,de,fr,sk,pl,cs,ar,hu,ru,it,zh-CN,zh-T
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+$(document).ready(function(){
+$('#search_div').hide();
+$('#search_div').on('focusout', function(){
+$('#search_div').fadeOut(2000);
+})
+$('#select-search').on('click', function(){
+$('#search_div').show();
+})
+$('.list_3').on('click',function(){
+var data_value=$(this).attr('id');
+console.log("asd"+data_value)
+$('#select-search').val('');
+$('#select-search').val(data_value);
+$('#search_div').fadeOut(1000);
+})
+});
+</script>
+<script>
+$(document).mouseup(function(e)
+{
+var container = $("#search_div");
+// if the target of the click isn't the container nor a descendant of the container
+if (!container.is(e.target) && container.has(e.target).length === 0)
+{
+container.fadeOut(1000);
+}
+});
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @extends('layouts.website')
 @section('content')
    <!--====== BANNER ==========-->
-   
+
 
 
 <section>
@@ -34,8 +34,8 @@
                   {{--  <h1 class="animated fadeInLeft"></h1>
 --}}
                     <div class="content animated fadeInLeft delay-250" id="content">{{-- start of content div --}}
-                       
-              
+
+
                      {!! html_entity_decode($content->about) !!}
 
                     </div>{{-- end of content div --}}

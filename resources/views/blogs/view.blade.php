@@ -58,7 +58,7 @@
 
                          @if(count($blogs)>0)
                          @foreach($blogs as $key=>$item)
-                         <a href="detail/{{$item->id}}">
+                         <a href="{{  url('detail') }}/{{$item->id}}">
                             <div class="posts">
                                 <div class="col-md-6 col-sm-6 col-xs-12"> <img src="{{url('/')}}/public/storage/blogs/{{$item->banner}}" alt="{{$item->name}}" class="img"  height="300px" /> </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -67,7 +67,7 @@
                                     <!--<span class="post_date">Date: {{$item->created_at}}</span>-->
                                     <span class="post_city">City: Illunois</span></h5>
                                     <p>{!!substr($item->description,0,200)!!}</p>
-                                     <a href="detail/{{$item->id}}" class="link-btn">Read more</a> </div>
+                                     <a href="{{  url('detail') }}/{{$item->id}}" class="link-btn">Read more</a> </div>
                                 </div>
                             </a>
                             @endforeach
@@ -76,22 +76,22 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12 text-center ">
-                                       {{$blogs->links()}} 
-                                   </div>    
+                                       {{$blogs->links()}}
+                                   </div>
                                </div>
 
                            </div>
 
-                           @else       
+                           @else
                            <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12 text-center alert-warning  " style="margin: 0px;padding: 0px;">
                                     <p style="font-size: 20px;" class="text-danger font-weight-bold" >No search results </p>
-                                </div>                                                    
-                            </div>                                                
+                                </div>
+                            </div>
                         </div>
-                        @endif                    
-                    </div>    
+                        @endif
+                    </div>
                 </div>
 
             </section>

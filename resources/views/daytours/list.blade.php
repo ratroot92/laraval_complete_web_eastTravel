@@ -13,7 +13,7 @@ height: auto;
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      
+
       <div id="app">
         @include('flash-message')
         @yield('content')
@@ -71,7 +71,7 @@ height: auto;
               <div id="cities">
                 <ul class="" >
                    <li>
-                               <a href="/daytours/list" style="padding:0px!important;margin:0px!important;color:white; border:none;">
+                               <a href="{{ url('/daytours/list') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="cities city styled" value="all_cities" type="checkbox" >
                                  <label for="">All Cities </label>
@@ -79,7 +79,7 @@ height: auto;
                               </a>
                            </li>
                   @foreach($cities=DB::table('cities')->where('of','daytour')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$city)
-                  
+
                   <li>
                     <div class="checkbox checkbox-info checkbox-circle">
                       <input id="city{{$key}}" class="cities city styled" value="{{$city->name}}" type="checkbox" >
@@ -89,7 +89,7 @@ height: auto;
                   @endforeach
                 </ul>
               </div>
-              
+
               <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_city_btn">view more</a>
               <div id="more_cities">
                 <ul class="" >
@@ -103,7 +103,7 @@ height: auto;
                   </li>
                   @else
                   <p>no more cities</p>
-                  
+
                   @endif
                   @endforeach
                 </ul>
@@ -133,7 +133,7 @@ height: auto;
               <div id="categories">
                 <ul class="" >
                  <li>
-                               <a href="/daytours/list" style="padding:0px!important;margin:0px!important;color:white; border:none;">
+                               <a href="{{ url('/daytours/list') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;">
                               <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="categories city styled" value="all_categories" type="checkbox" >
                                  <label for="">All Categories </label>
@@ -141,7 +141,7 @@ height: auto;
                            </a>
                            </li>
                   @foreach($categories=DB::table('categories')->where('of','daytour')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$category)
-                  
+
                   <li>
                     <div class="checkbox checkbox-info checkbox-circle">
                       <input id="category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
@@ -151,12 +151,12 @@ height: auto;
                   @endforeach
                 </ul>
               </div>
-              
+
               <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_category_btn">view more</a>
               <div id="more_categories">
                 <ul class="" >
                   @foreach($counstries=DB::table('categories')->where('of','daytour')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$category)
-                  
+
                   <li>
                     <div class="checkbox checkbox-info checkbox-circle">
                       <input id="more_category{{$key}}" class="categories category styled" value="{{$category->name}}" type="checkbox" >
@@ -191,14 +191,14 @@ height: auto;
               <div id="countries">
                 <ul class="" >
                    <li>
-                                <a href="/daytours/list" style="padding:0px!important;margin:0px!important;color:white; border:none;"> <div class="checkbox checkbox-info checkbox-circle">
+                                <a href="{{ url('/daytours/list') }}" style="padding:0px!important;margin:0px!important;color:white; border:none;"> <div class="checkbox checkbox-info checkbox-circle">
                                  <input id="" class="countries city styled" value="all_countries" type="checkbox" >
                                  <label for="">All Countries </label>
                               </div>
                            </a>
                            </li>
                   @foreach($counstries=DB::table('countries')->where('of','daytour')->orderBy('id','desc')->take(5)->distinct()->get() as $key=>$country)
-                  
+
                   <li>
                     <div class="checkbox checkbox-info checkbox-circle">
                       <input id="country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -208,12 +208,12 @@ height: auto;
                   @endforeach
                 </ul>
               </div>
-              
+
               <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s" id="more_country_btn">view more</a>
               <div id="more_countries">
                 <ul class="" >
                   @foreach($counstries=DB::table('countries')->where('of','daytour')->orderBy('id','desc')->skip(5)->take(10)->distinct()->get() as  $key=>$country)
-                  
+
                   <li>
                     <div class="checkbox checkbox-info checkbox-circle">
                       <input id="more_country{{$key}}" class="countries country styled" value="{{$country->name}}" type="checkbox" >
@@ -251,7 +251,7 @@ height: auto;
                     <label for="chp51"> €250 - Above </label>
                   </div>
                 </li>
-                
+
                 <li>
                   <div class="checkbox checkbox-info checkbox-circle">
                     <input id="chp52" class="price styled" value="250"  type="checkbox">
@@ -278,7 +278,7 @@ height: auto;
                 </li>
               </ul>
             </form>
-            
+
           </div>
         </div>
       </div>
@@ -288,15 +288,15 @@ height: auto;
 </div>
 <div class="col-md-9 " id="searchRendering">
   @foreach($daytours as $key=>$item)
-  <!-- <a href="/daytour/detail/{{$item->id}}"> -->
+  <!-- <a href="{{ url('/daytour/detail')}}/{{$item->id}}"> -->
   <div class="row" style="border:1px solid #e9ecef;background-color: white!important;margin-bottom: 10px;">
-    
+
     <div class="col-md-3 img-thumbnail  " style="padding:0px; margin:0px;border-radius:0px;">
       <img src="{{$item->banner}}" width="100%" height="150px"  alt="" style="padding:0px; margin:0px;">
     </div>
     <div class="col-md-6" >
       <div class="trav-list-bod">
-        <a href="/daytour/detail/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
+        <a href="{{ url('/daytour/detail')}}/{{$item->id}}"><h3 style="color:#f4364f;font-family: 'Quicksand', sans-serif;
         font-weight: 700;">{{$item->name}}</h3></a>
         <p>{!!substr($item->desc,0,150)!!}</p>
       </div>
@@ -308,88 +308,88 @@ height: auto;
         @else
         <div class="hot-page2-alp-r-hot-page-rat pull">No Discount</div>
         @endif <span class="hot-list-p3-1">From</span> <span class="hot-list-p3-2">€{{$item->price}}</span><span class="hot-list-p3-4">
-        <a href="/daytour/detail/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
-        
+        <a href="{{ url('/daytour/detail')}}/{{$item->id}}" class="hot-page2-alp-quot-btn">Book Now</a>
+
       </span> </div>
     </div>
     <div>
       <div class="trav-ami">
         <h4>Detail and Includes</h4>
-        
+
         <ul>
           @if(count($icons)>1 )
           @foreach($icons as $icon )
           @if($icon->name=='sightseeing' && $icon->fkey==$item->id)
-          <li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
+          <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="{{asset('public/images/icon/a14.png')}}" alt=""> <span>Sightseeing</span></li>
           @else
           @endif
           @endforeach
           @foreach($icons as $icon )
           @if($icon->name=='hotel' && $icon->fkey==$item->id)
-          <li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
+          <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="{{asset('public/images/icon/a15.png')}}" alt=""> <span>Hotel</span></li>
           @else
           @endif
           @endforeach
           @foreach($icons as $icon)
           @if($icon->name=='transfer' && $icon->fkey==$item->id)
-          <li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
+          <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="{{asset('public/images/icon/a16.png')}}"alt=""> <span>Transfer</span></li>
           @else
           @endif
           @endforeach
           @foreach($icons as $icon)
           @if($icon->name=='days' && $icon->fkey==$item->id)
-          <li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
+          <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="{{asset('public/images/icon/a18.png')}}"alt=""> <span>{{$item->duration}}</span></li>
           @else
           @endif
           @endforeach
           @foreach($icons as $icon)
           @if($icon->name=='multiple_cities' && $icon->fkey==$item->id)
-          <li href="/daytour/detail/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
+          <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="{{asset('public/images/icon/a19.png')}}" alt="">
             <span style="font-size: 11px">  Multiple Cities</span>
             @else
             @endif
             @endforeach
-            
+
             @foreach($icons as $icon )
             @if($icon->name=='breakfast' && $icon->fkey==$item->id)
-            <li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
+            <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Breakfast</span></li>
             @else
             @endif
             @endforeach
             @foreach($icons as $icon )
             @if($icon->name=='breakfast_halfboard' && $icon->fkey==$item->id)
-            <li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
+            <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png" alt=""> <span>Half_board</span></li>
             @else
             @endif
             @endforeach
             @foreach($icons as $icon)
             @if($icon->name=='breakfast_full_board' && $icon->fkey==$item->id)
-            <li href="/activity/detail/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
+            <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="https://image.flaticon.com/icons/png/512/84/84072.png"alt=""> <span>Full_board</span></li>
             @else
             @endif
             @endforeach
             @foreach($icons as $icon)
             @if($icon->name=='transfer_icon' && $icon->fkey==$item->id)
-            <li href="/activity/detail/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
+            <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="http://simpleicon.com/wp-content/uploads/car.png"alt=""> <span>Transfer</span></li>
             @else
             @endif
             @endforeach
             @foreach($icons as $icon)
             @if($icon->name=='cruiser_icon' && $icon->fkey==$item->id)
-            <li href="/activity/detail/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
+            <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="https://www.pngrepo.com/png/193576/170/cruiser-war.png" alt="">
               <span style="font-size: 11px">  Cruiser</span>
               @else
               @endif
               @endforeach
               @foreach($icons as $icon)
               @if($icon->name=='flight_icon' && $icon->fkey==$item->id)
-              <li href="/activity/detail/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
+              <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="http://cdn.onlinewebfonts.com/svg/img_528940.png"alt=""> <span>Flight</span></li>
               @else
               @endif
               @endforeach
               @foreach($icons as $icon)
               @if($icon->name=='activity_icon' && $icon->fkey==$item->id)
-              <li href="/activity/detail/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-daytours-1/64/16-512.png" alt="">
+              <li href="{{ url('/daytour/detail')}}/{{$item->id}}"><img src="https://cdn1.iconfinder.com/data/icons/recreational-daytours-1/64/16-512.png" alt="">
                 <span style="font-size: 11px">  Activity</span>
                 @else
                 @endif
@@ -410,7 +410,7 @@ height: auto;
       </div>
       <!-- </a> -->
       @endforeach
-      
+
     </div>{{-- end  col-md-8 --}}
   </div>
 </div>

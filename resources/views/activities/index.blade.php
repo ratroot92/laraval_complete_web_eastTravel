@@ -61,9 +61,9 @@ height: 25px;
       {{--   <td>{{$item->loc}}</td> --}}
       <td>{{$item->price}}</td>
       {{--  <td>{{$item->date}}</td> --}}
-      <td><a href="/activity/update/{{ $item->id }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-      <i onclick="confirm_delete('{{$item->id}}')" href="/activity/delete/{{ $item->id }}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
-      <a href="/activity/detail/{{ $item->id }}" target="_blank" class="sb2-2-1-edit"><i class="fa fa-eye" aria-hidden="true"></i></a>
+      <td><a href="{{ url('/activity/update') }}/{{ $item->id }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+      <i onclick="confirm_delete('{{$item->id}}')" href="{{  url('/activity/delete') }}/{{ $item->id }}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
+      <a href="{{  url('/activity/detail') }}/{{ $item->id }}" target="_blank" class="sb2-2-1-edit"><i class="fa fa-eye" aria-hidden="true"></i></a>
     </td>
 
 

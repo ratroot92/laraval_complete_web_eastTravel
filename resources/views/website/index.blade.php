@@ -906,8 +906,8 @@ Cruises</span></h2>
 </p>
 </div>
 @endsection
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+{{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script> --}}
 {{-- <script>
 window.fbAsyncInit = function() {
 FB.init({
@@ -944,35 +944,7 @@ js = d.createElement(s);
 js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script>
-$(document).ready(function(){
-$('#search_div').hide();
-$('#search_div').on('focusout', function(){
-$('#search_div').fadeOut(2000);
-})
-$('#select-search').on('click', function(){
-$('#search_div').show();
-})
-$('.list_3').on('click',function(){
-var data_value=$(this).attr('id');
-console.log("asd"+data_value)
-$('#select-search').val('');
-$('#select-search').val(data_value);
-$('#search_div').fadeOut(1000);
-})
-});
-</script>
-<script>
-$(document).mouseup(function(e)
-{
-var container = $("#search_div");
-// if the target of the click isn't the container nor a descendant of the container
-if (!container.is(e.target) && container.has(e.target).length === 0)
-{
-container.fadeOut(1000);
-}
-});
-</script>
+
 {{-- <div class="fb-customerchat"
 page_id="411933035571511">
 </div> --}}

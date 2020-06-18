@@ -140,10 +140,11 @@ color: #fff;
                 <input type="radio" id="radioTransfer" name="options" value="5">
                 <label for="radioTransfer">Activites</label>
               </div>
-              <input type="search"  name="myCountry" id="select-search" class= " typeahead form-control " autocomplete="off" placeholder="Enter Destination (city or country)"  />
+              <input type="text" name="country_name" id="country_name" class= " typeahead form-control " autocomplete="off" placeholder="Enter Destination (city or country)"  />
+             {{ csrf_field() }}
 
-
-              <div style="text-align: left;width:100%;background-color:white!important;position: absolute; z-index:99;    padding: 10px 10px;" id="search_div">
+              <div id="country_list"></div>
+<div style="text-align: left;width:100%;background-color:white!important;position: absolute; z-index:99;    padding: 10px 10px;" id="search_div">
                 <a href="{{url('/cities')}}" ><h2 style="color: #253d52; padding-left: 15px">Popular <span style="color: #f4364f;font-size: 2rem;">Cities</span></h2>
               </a>
               <!-- put row here -->
@@ -341,6 +342,10 @@ color: #fff;
 
 
             </div>
+
+
+
+
 
 
 

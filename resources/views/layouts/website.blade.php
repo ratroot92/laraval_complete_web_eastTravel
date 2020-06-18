@@ -263,13 +263,8 @@ $path="../public/";
 <!--====== FOOTER 2 ==========-->
 <section>
 <div class="rows">
-    <div class="form-group">
-    <p>Ajax Autocomplete</p>
-    <input type="text" name="country_name" id="country_name" placeholder="enter country name " class="form-control" />
-    <div id="country_list">
-        <ul class="dropdown-menu"  style="display:block;position:relative"><li><a href="#">China</a></li></ul>
-    </div>
-    {{ csrf_field() }}
+
+
 </div>
 <div class="footer">
     <div class="container">
@@ -445,11 +440,19 @@ $path="../public/";
                         data:{query:query,_token:_token},
                         success:function(data){
                             $('#country_list').fadeIn();
-                            $('#country_list').html(data)
+                            $('#country_list').empty().html(data)
                         }
                     })
                 }
             })
+
+$('.search_list_name').on('click',function(){
+    console.log("cliked")
+    var value=$(this).text();
+    console.log(value);
+    $('#country_name').val(value);
+})
+
         })
     </script><script src="{{url('/theme/travel')}}/js/bootstrap.js"></script>
 <script src="{{url('/theme/travel')}}/js/wow.min.js"></script>
@@ -496,34 +499,6 @@ pageLanguage: 'en', includedLanguages: 'en,de,fr,sk,pl,cs,ar,hu,ru,it,zh-CN,zh-T
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <script>
-$(document).ready(function(){
-$('#search_div').hide();
-$('#search_div').on('focusout', function(){
-$('#search_div').fadeOut(2000);
-})
-$('#select-search').on('click', function(){
-$('#search_div').show();
-})
-$('.list_3').on('click',function(){
-var data_value=$(this).attr('id');
-console.log("asd"+data_value)
-$('#select-search').val('');
-$('#select-search').val(data_value);
-$('#search_div').fadeOut(1000);
-})
-});
-</script>
-<script>
-$(document).mouseup(function(e)
-{
-var container = $("#search_div");
-// if the target of the click isn't the container nor a descendant of the container
-if (!container.is(e.target) && container.has(e.target).length === 0)
-{
-container.fadeOut(1000);
-}
-});
-</script>
+
 </body>
 </html>

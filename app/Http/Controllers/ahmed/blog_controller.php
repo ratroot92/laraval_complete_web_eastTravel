@@ -29,11 +29,17 @@ class blog_controller extends Controller {
 
 	public function autocompleteFetch(Request $request) {
 		if ($request->get('query')) {
-			$query  = $request->get('query');
-			$data   = DB::table('countries')->where('name', 'LIKE', '%'.$query.'%')->get();
-			$output = '<ul class="dropdown-menu"  style="display:block;position:relative">';
-			foreach ($data as $row) {
-				$output .= '<li><a href="#">'.$row->name.'</a></li>';
+			$query = $request->get('query');
+
+			$db_cities    = DB::table('cities')->where('name', 'LIKE', '%'.$query.'%')->distinct()->get();
+			$db_countries = DB::table('countries')->where('name', 'LIKE', '%'.$query.'%')->distinct()->get();
+			$output       = '<ul class="dropdown-menu"  style="display:block;position:absolute">';
+
+			foreach ($db_countries as $row) {
+				$output .= '<li style="font-size:12px;"><a class="search_list_name">'.$row->name.'</a></li>';
+			}
+			foreach ($db_cities as $row) {
+				$output .= '<li style="font-size:12px;"><a class="search_list_name">'.$row->name.'</a></li>';
 			}
 		}
 		$output .= '</ul>';

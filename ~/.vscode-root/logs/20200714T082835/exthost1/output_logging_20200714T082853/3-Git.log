@@ -1,0 +1,2007 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/hadooop/Desktop/east_travels/localhost/easttravel
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :resources/views/layouts/website.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/website.blade.php
+> git cat-file -s 7bb0989632ad6e5e0466f0ccb6b74f4b3e04de3a
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/layouts/website.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/website.blade.php
+> git cat-file -s 7bb0989632ad6e5e0466f0ccb6b74f4b3e04de3a
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :.env
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/.env
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2019_10_26_190530_create_files_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2019_10_26_190530_create_files_table.php
+> git cat-file -s c2c794534e7966b63e6847251cbbefdb02e69a46
+> git status -z -u
+> git show :.env
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/.env
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_034047_create_activities_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_034047_create_activities_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :app/Event.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Event.php
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/Event.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Event.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_034047_create_activities_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_034047_create_activities_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Event.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Event.php
+> git show :database/migrations/2020_07_14_034047_create_activities_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_034047_create_activities_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_034047_create_activities_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_034047_create_activities_table.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_034047_create_activities_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_034047_create_activities_table.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_07_14_035933_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_035933_create_all__events_table.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :database/migrations/2020_07_14_035933_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_035933_create_all__events_table.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_035933_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_035933_create_all__events_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_035933_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_035933_create_all__events_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_07_14_040343_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_040343_create_all__events_table.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_040343_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_040343_create_all__events_table.php
+> git status -z -u
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :resources/views/layouts/admin.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/admin.blade.php
+> git cat-file -s e112af2d1b25f54d52acd0f06b8a722b1f89a2a7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git show :resources/views/layouts/admin.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/admin.blade.php
+> git cat-file -s e112af2d1b25f54d52acd0f06b8a722b1f89a2a7
+> git show :vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+> git check-ignore -v -z --stdin
+> git show :resources/views/layouts/admin.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/admin.blade.php
+> git cat-file -s e112af2d1b25f54d52acd0f06b8a722b1f89a2a7
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git show :resources/views/activities/add.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/activities/add.blade.php
+> git cat-file -s 960e7dbe03510e58de24c6ceceb6882faa5c1049
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git config --get commit.template
+> git show :resources/views/layouts/admin.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/admin.blade.php
+> git cat-file -s e112af2d1b25f54d52acd0f06b8a722b1f89a2a7
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/layouts/website.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/website.blade.php
+> git cat-file -s 7bb0989632ad6e5e0466f0ccb6b74f4b3e04de3a
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :resources/views/layouts/admin.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/admin.blade.php
+> git cat-file -s e112af2d1b25f54d52acd0f06b8a722b1f89a2a7
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git status -z -u
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git status -z -u
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :database/migrations/2020_07_14_040343_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_040343_create_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Http/Controllers/ahmed/activity_controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/ahmed/activity_controller.php
+> git cat-file -s a7aec8bcf7a5a74372ddcba1123b642642b2cd61
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City.php
+> git cat-file -s f870d8cea9271e8ebc24df19c241397f891f7eea
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git status -z -u
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :resources/views/layouts/website.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/layouts/website.blade.php
+> git cat-file -s 7bb0989632ad6e5e0466f0ccb6b74f4b3e04de3a
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :resources/views/all_events/addEvent.blade.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/resources/views/all_events/addEvent.blade.php
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :database/migrations/2020_07_14_062021_create_city__all___events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_062021_create_city__all___events_table.php
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :database/migrations/2020_07_14_062021_create_city__all___events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_062021_create_city__all___events_table.php
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git config --get commit.template
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git status -z -u
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :database/migrations/2020_07_14_040343_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_040343_create_all__events_table.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git show :app/Activity_City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity_City.php
+> git show :app/City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City.php
+> git cat-file -s f870d8cea9271e8ebc24df19c241397f891f7eea
+> git show :app/Activity.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Activity.php
+> git cat-file -s 68cd8cd7b94bb2f21a2654052f0eeb4d00c88f85
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :app/City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City.php
+> git cat-file -s f870d8cea9271e8ebc24df19c241397f891f7eea
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :app/City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City.php
+> git cat-file -s f870d8cea9271e8ebc24df19c241397f891f7eea
+> git show :app/City_All__Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City_All__Events.php
+> git show :app/All_Events.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/All_Events.php
+> git show :app/City.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/City.php
+> git cat-file -s f870d8cea9271e8ebc24df19c241397f891f7eea
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :database/migrations/2020_07_14_040343_create_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_040343_create_all__events_table.php
+> git show :database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/database/migrations/2020_07_14_060542_create_city_all__events_table.php
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git status -z -u
+> git show :app/Http/Controllers/Event_Controller.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/app/Http/Controllers/Event_Controller.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :routes/web.php
+> git ls-files --stage -- /home/hadooop/Desktop/east_travels/localhost/easttravel/routes/web.php
+> git cat-file -s 1d67eb18449a831b2401246a3644d47a4c639c36
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template

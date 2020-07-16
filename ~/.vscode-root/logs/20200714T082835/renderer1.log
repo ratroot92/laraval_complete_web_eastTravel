@@ -1,0 +1,144 @@
+[2020-07-14 08:28:53.090] [renderer1] [warning] UNRESPONSIVE extension host, 'ritwickdey.LiveServer' took 58% of 6231.91ms, saved PROFILE here: '/tmp/exthost-87c63f.cpuprofile' [{"id":"gc","total":16641,"percentage":0},{"id":"ritwickdey.LiveServer","total":3587733,"percentage":58},{"id":"self","total":4933,"percentage":0},{"id":"Zignd.html-css-class-completion","total":2622119,"percentage":42}]
+[2020-07-14 08:29:49.319] [renderer1] [warning] UNRESPONSIVE extension host, 'ecmel.vscode-html-css' took 79% of 1308.486ms, saved PROFILE here: '/tmp/exthost-b32529.cpuprofile' [{"id":"bmewburn.vscode-intelephense-client","total":45614,"percentage":3},{"id":"CoenraadS.bracket-pair-colorizer","total":5595,"percentage":0},{"id":"CoenraadS.bracket-pair-colorizer-2","total":106534,"percentage":8},{"id":"ecmel.vscode-html-css","total":1027994,"percentage":79},{"id":"fabiospampinato.vscode-highlight","total":171,"percentage":0},{"id":"formulahendry.auto-close-tag","total":505,"percentage":0},{"id":"formulahendry.auto-rename-tag","total":2506,"percentage":0},{"id":"gc","total":9111,"percentage":1},{"id":"humy2833.ftp-simple","total":290,"percentage":0},{"id":"program","total":50366,"percentage":4},{"id":"rifi2k.format-html-in-php","total":2162,"percentage":0},{"id":"self","total":51658,"percentage":4},{"id":"vscode.git","total":157,"percentage":0},{"id":"vscode.merge-conflict","total":489,"percentage":0}]
+[2020-07-14 09:07:04.627] [renderer1] [error] Cannot read property 'getRuleStack' of undefined: TypeError: Cannot read property 'getRuleStack' of undefined
+    at DocumentDecoration.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:42:26)
+    at DocumentDecorationManager.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecorationManager.js:47:32)
+    at /home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/extension.js:30:39
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at t.ExtHostDocuments.$acceptModelChanged (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:648:398)
+    at e._doInvokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:757)
+    at e._invokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:449)
+    at e._receiveRequest (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:787:120)
+    at e._receiveOneMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:785:970)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:784:213
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:957:179
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at t.PersistentProtocol._receiveMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:237:17)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:234:155
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at p.acceptChunk (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:230:129)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:229:483
+    at Socket.t (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:238:565)
+    at Socket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at Socket.Readable.push (_stream_readable.js:210:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:166:17)
+[2020-07-14 09:07:04.978] [renderer1] [error] Cannot read property 'getRuleStack' of undefined: TypeError: Cannot read property 'getRuleStack' of undefined
+    at DocumentDecoration.tokenizeLine (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:227:35)
+    at DocumentDecoration.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:39:30)
+    at DocumentDecorationManager.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecorationManager.js:47:32)
+    at /home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/extension.js:30:39
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at t.ExtHostDocuments.$acceptModelChanged (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:648:398)
+    at e._doInvokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:757)
+    at e._invokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:449)
+    at e._receiveRequest (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:787:120)
+    at e._receiveOneMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:785:970)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:784:213
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:957:179
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at t.PersistentProtocol._receiveMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:237:17)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:234:155
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at p.acceptChunk (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:230:129)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:229:483
+    at Socket.t (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:238:565)
+    at Socket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at Socket.Readable.push (_stream_readable.js:210:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:166:17)
+[2020-07-14 09:07:06.197] [renderer1] [error] Cannot read property 'getRuleStack' of undefined: TypeError: Cannot read property 'getRuleStack' of undefined
+    at DocumentDecoration.tokenizeLine (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:227:35)
+    at DocumentDecoration.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:39:30)
+    at DocumentDecorationManager.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecorationManager.js:47:32)
+    at /home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/extension.js:30:39
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at t.ExtHostDocuments.$acceptModelChanged (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:648:398)
+    at e._doInvokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:757)
+    at e._invokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:449)
+    at e._receiveRequest (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:787:120)
+    at e._receiveOneMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:785:970)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:784:213
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:957:179
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at t.PersistentProtocol._receiveMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:237:17)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:234:155
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at p.acceptChunk (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:230:129)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:229:483
+    at Socket.t (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:238:565)
+    at Socket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at Socket.Readable.push (_stream_readable.js:210:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:166:17)
+[2020-07-14 09:07:07.557] [renderer1] [error] Cannot read property 'getRuleStack' of undefined: TypeError: Cannot read property 'getRuleStack' of undefined
+    at DocumentDecoration.tokenizeLine (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:227:35)
+    at DocumentDecoration.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:39:30)
+    at DocumentDecorationManager.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecorationManager.js:47:32)
+    at /home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/extension.js:30:39
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at t.ExtHostDocuments.$acceptModelChanged (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:648:398)
+    at e._doInvokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:757)
+    at e._invokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:449)
+    at e._receiveRequest (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:787:120)
+    at e._receiveOneMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:785:970)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:784:213
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:957:179
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at t.PersistentProtocol._receiveMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:237:17)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:234:155
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at p.acceptChunk (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:230:129)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:229:483
+    at Socket.t (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:238:565)
+    at Socket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at Socket.Readable.push (_stream_readable.js:210:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:166:17)
+[2020-07-14 10:33:52.215] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2020-07-14 10:33:57.239] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2020-07-14 10:35:30.865] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2020-07-14 10:47:00.959] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2020-07-14 11:10:55.265] [renderer1] [error] Cannot read property 'getRuleStack' of undefined: TypeError: Cannot read property 'getRuleStack' of undefined
+    at DocumentDecoration.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecoration.js:42:26)
+    at DocumentDecorationManager.onDidChangeTextDocument (/home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/documentDecorationManager.js:47:32)
+    at /home/hadooop/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.0/out/src/extension.js:30:39
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at t.ExtHostDocuments.$acceptModelChanged (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:648:398)
+    at e._doInvokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:757)
+    at e._invokeHandler (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:788:449)
+    at e._receiveRequest (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:787:120)
+    at e._receiveOneMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:785:970)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:784:213
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:957:179
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at v.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:232:615)
+    at t.PersistentProtocol._receiveMessage (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:237:17)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:234:155
+    at e.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:67)
+    at p.acceptChunk (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:230:129)
+    at /usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:229:483
+    at Socket.t (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:238:565)
+    at Socket.emit (events.js:203:13)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:276:11)
+    at Socket.Readable.push (_stream_readable.js:210:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:166:17)

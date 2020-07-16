@@ -4,83 +4,81 @@
 
 @section('content')
 
-    <div class="sb2-2">
+<div class="sb2-2">
 
-        <div class="sb2-2-2">
+    <div class="sb2-2-2">
 
-               <ul>
+        <ul>
 
-              <li><a href="{{url('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <li><a href="{{asset('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
+            <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
+            <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
 
-            
 
-              <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
 
-              <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
+            <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
 
-              <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+            <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
 
-              </li>
+            <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
 
-              </ul>
+            </li>
 
-        </div>
+        </ul>
 
-        <div class="sb2-2-add-blog sb2-2-1">
+    </div>
 
-            <div class="box-inn-sp">
+    <div class="sb2-2-add-blog sb2-2-1">
 
-                <div class="inn-title">
+        <div class="box-inn-sp">
 
-                    <h4>Post</h4>
+            <div class="inn-title">
 
-                    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                <h4>Post</h4>
 
-                </div>
+                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
 
-                <div class="bor">
+            </div>
 
-                    <form method="post"  action="{{route('activity.insertcategory')}}">
+            <div class="bor">
 
-                        {{csrf_field()}}
+                <form method="post" action="{{route('activity.insertcategory')}}">
 
-                        <div class="row">
+                    {{csrf_field()}}
 
-                            <div class="input-field col s12">
+                    <div class="row">
 
-                                <input  name="name" id="name" type="text" class="validate" required/>
+                        <div class="input-field col s12">
 
-                                <label for="list-title">Category Name</label>
+                            <input name="name" id="name" type="text" class="validate" required />
 
-                            </div>
+                            <label for="list-title">Category Name</label>
 
                         </div>
 
-                        <div class="row">
+                    </div>
 
-                            <div class="input-field col s12">
+                    <div class="row">
 
-                                <button type="submit" class="waves-effect waves-light btn-large">Create Activity Category <i class="fa fa-paper-plane"></i></button>
+                        <div class="input-field col s12">
 
-                            </div>
+                            <button type="submit" class="waves-effect waves-light btn-large">Create Activity Category <i class="fa fa-paper-plane"></i></button>
 
                         </div>
 
+                    </div>
 
 
 
 
-                    </form>
 
-                </div>
+                </form>
 
             </div>
 
@@ -88,5 +86,6 @@
 
     </div>
 
-@endsection
+</div>
 
+@endsection

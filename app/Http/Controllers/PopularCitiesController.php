@@ -4,6 +4,13 @@ use DB;
 use Illuminate\Http\Request;
 
 class PopularCitiesController extends Controller {
+	private $base_url;
+
+	public function __construct() {
+
+		$this->base_url = url('/');
+
+	}
 	//crud module
 	private $module = "popularcities";
 	//for index page
@@ -37,7 +44,7 @@ class PopularCitiesController extends Controller {
 			// $destinationPath = public_path(StoragePath::path().'/storage/popularcities');
 			// $image->move($destinationPath, $imgname);
 			$destinationPath = $image->move(public_path('/cities/images/'), $imgname);
-			$img_path        = 'https://www.dvenza.com/public/cities/images/'.$imgname;
+			$img_path        = $this->base_url.'/public/cities/images/'.$imgname;
 			$data['banner']  = $img_path;
 		}
 		if ($id == "-1") {
@@ -54,7 +61,7 @@ class PopularCitiesController extends Controller {
 		return redirect($this->module."/get")->with('danger', 'Popular Cities is deleted');
 	}
 	public function all() {
-		$cities = DB::table('popularcities')->get();
+		$cities = DB::table('popularcities')->paginate('6');
 		return view('popularcities/all_popularcities', [
 				'all_popularcities' => $cities,
 			]);

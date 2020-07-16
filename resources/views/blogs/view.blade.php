@@ -1,9 +1,8 @@
-
 @extends('layouts.website')
 @section('content')
 
 <style>
-    nav{
+    nav {
         background-color: white;
         margin-bottom: 20px;
 
@@ -11,14 +10,13 @@
         justify-content: center;
         align-items: center;
     }
-
 </style>
 
 
 <section>
     <div class="rows inner_banner inner_banner_5">
         <div class="container">
-            <h2><span>Blogs -  </span> Your Favourite Tours Blogs Now!</h2>
+            <h2><span>Blogs - </span> Your Favourite Tours Blogs Now!</h2>
             <ul>
                 <li><a href="#inner-page-title">Home</a>
                 </li>
@@ -52,22 +50,23 @@
 
                 <section class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12"style="margin-top: 50px;">
+                        <div class="col-md-12" style="margin-top: 50px;">
 
 
 
-                         @if(count($blogs)>0)
-                         @foreach($blogs as $key=>$item)
-                         <a href="detail/{{$item->id}}">
-                            <div class="posts">
-                                <div class="col-md-6 col-sm-6 col-xs-12"> <img src="{{url('/')}}/public/storage/blogs/{{$item->banner}}" alt="{{$item->name}}" class="img"  height="300px" /> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <h3>Thai island hopper east</h3>
-                                    <h5><span class="post_author">Author: {{$item->name}}</span>
-                                    <!--<span class="post_date">Date: {{$item->created_at}}</span>-->
-                                    <span class="post_city">City: Illunois</span></h5>
-                                    <p>{!!substr($item->description,0,200)!!}</p>
-                                     <a href="detail/{{$item->id}}" class="link-btn">Read more</a> </div>
+                            @if(count($blogs)>0)
+                            @foreach($blogs as $key=>$item)
+                            <a href="{{  url('detail') }}/{{$item->id}}">
+                                <div class="posts">
+                                    <div class="col-md-6 col-sm-6 col-xs-12"> <img src="{{asset('/')}}/public/storage/blogs/{{$item->banner}}" alt="{{$item->name}}" class="img" height="300px" /> </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h3>Thai island hopper east</h3>
+                                        <h5><span class="post_author">Author: {{$item->name}}</span>
+                                            <!--<span class="post_date">Date: {{$item->created_at}}</span>-->
+                                            <span class="post_city">City: Illunois</span></h5>
+                                        <p>{!!substr($item->description,0,200)!!}</p>
+                                        <a href="{{  url('detail') }}/{{$item->id}}" class="link-btn">Read more</a>
+                                    </div>
                                 </div>
                             </a>
                             @endforeach
@@ -76,28 +75,28 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12 text-center ">
-                                       {{$blogs->links()}} 
-                                   </div>    
-                               </div>
+                                        {{$blogs->links()}}
+                                    </div>
+                                </div>
 
-                           </div>
+                            </div>
 
-                           @else       
-                           <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12 text-center alert-warning  " style="margin: 0px;padding: 0px;">
-                                    <p style="font-size: 20px;" class="text-danger font-weight-bold" >No search results </p>
-                                </div>                                                    
-                            </div>                                                
+                            @else
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 text-center alert-warning  " style="margin: 0px;padding: 0px;">
+                                        <p style="font-size: 20px;" class="text-danger font-weight-bold">No search results </p>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
                         </div>
-                        @endif                    
-                    </div>    
-                </div>
+                    </div>
 
-            </section>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 @endsection

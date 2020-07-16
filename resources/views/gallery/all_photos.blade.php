@@ -4,36 +4,36 @@
 
 @section('content')
 
-    <div class="sb2-2">
+<div class="sb2-2">
 
-        <div class="sb2-2-2">
+    <div class="sb2-2-2">
 
-            <ul>
+        <ul>
 
-              <li><a href="{{url('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <li><a href="{{asset('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('gallery.add')}}"> Add Videos </a>
+            <li class="active-bre"><a href="{{route('gallery.add')}}"> Add Videos </a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('gallery..videos.all')}}"> All Videos</a></li>
-
-            
+            <li class="active-bre"><a href="{{route('gallery..videos.all')}}"> All Videos</a></li>
 
 
-              </ul>
 
-        </div>
 
-        <div class="sb2-2-1">
+        </ul>
 
-            <h2>All Gallery Photos</h2>
+    </div>
 
-            <table class="table">
+    <div class="sb2-2-1">
 
-                <thead>
+        <h2>All Gallery Photos</h2>
+
+        <table class="table">
+
+            <thead>
 
                 <tr>
 
@@ -41,11 +41,11 @@
 
                     <th>Title</th>
 
-                  
+
 
                     <th>Description</th>
                     <th>Image</th>
-                      <th>Created At</th>
+                    <th>Created At</th>
 
                     <th>Edit</th>
 
@@ -53,63 +53,60 @@
 
                 </tr>
 
-                </thead>
+            </thead>
 
-                <tbody>
+            <tbody>
 
                 @foreach($photos as $key=>$photo)
 
-                    <tr>
+                <tr>
 
-                        <td>{{$photo->id}}</td>
-                        <td>{{$photo->title}}</td>
-                        <td>{{$photo->desc}}</td>
-                        <td><image src="{{$photo->url}}" height="80" width="200" class="img-fluid"/></td>
-                        <td>{{$photo->created_at}}</td>
+                    <td>{{$photo->id}}</td>
+                    <td>{{$photo->title}}</td>
+                    <td>{{$photo->desc}}</td>
+                    <td>
+                        <image src="{{$photo->url}}" height="80" width="200" class="img-fluid" />
+                    </td>
+                    <td>{{$photo->created_at}}</td>
 
-                        <td><a href="{{route('gallery.editview.photo',['action'=>'edit','id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <td><a href="{{route('gallery.editview.photo',['action'=>'edit','id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
-                        </td>
+                    </td>
 
-                        <td>
+                    <td>
 
-                            <i onclick="confirm_delete('{{$photo->id}}')" href="{{route('package_cat.delete',['id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
+                        <i onclick="confirm_delete('{{$photo->id}}')" href="{{route('package_cat.delete',['id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
 
-                        </td>
+                    </td>
 
-                    </tr>
+                </tr>
 
                 @endforeach
 
-                </tbody>
+            </tbody>
 
-            </table>
-
-        </div>
+        </table>
 
     </div>
 
+</div>
 
 
-    <script>
 
-        function confirm_delete(id) {
+<script>
+    function confirm_delete(id) {
 
-            let c = confirm("Do you want to delete this Photo?");
+        let c = confirm("Do you want to delete this Photo?");
 
-            if(c === true){
+        if (c === true) {
 
-                window.location.href ="{{url('/gallery/delete/photo/')}}/"+id;
-
-            }
+            window.location.href = "{{asset('/gallery/delete/photo/')}}/" + id;
 
         }
 
-    </script>
+    }
+</script>
 
 
 
 @endsection
-
-
-

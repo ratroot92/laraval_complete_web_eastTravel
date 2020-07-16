@@ -7,7 +7,7 @@
     <div class="sb2-2-2">
         <ul>
             <li>
-                <a href="{{url('/admin/dashboard')}}">
+                <a href="{{asset('/admin/dashboard')}}">
                     <i aria-hidden="true" class="fa fa-home">
                     </i>
                     Home
@@ -36,19 +36,19 @@
                 </p>
             </div>
             <div class="bor">
-                <form action="{{url('gallery/add_video')}}" method="post">
+                <form action="{{asset('gallery/add_video')}}" method="post">
                     {{csrf_field()}}
                     <div class="row">
                         <div class="input-field col s12">
-                            <input class="validate" id="name" name="name" required="" type="text" required="required"/>
+                            <input class="validate" id="name" name="name" required="" type="text" required="required" />
                             <label for="name">
-                                Video  Name
+                                Video Name
                             </label>
                         </div>
                         <div class="input-field col s12">
-                            <input class="validate" id="url" name="url" required="" type="url" required="required"/>
+                            <input class="validate" id="url" name="url" required="" type="url" required="required" />
                             <label for="url">
-                                Video  URL
+                                Video URL
                             </label>
                         </div>
                     </div>

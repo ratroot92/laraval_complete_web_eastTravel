@@ -4,43 +4,43 @@
 
 @section('content')
 
-    <div class="sb2-2">
+<div class="sb2-2">
 
-        <div class="sb2-2-2">
+    <div class="sb2-2-2">
 
-           <ul>
+        <ul>
 
-              <li><a href="{{url('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <li><a href="{{asset('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
+            <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
 
-              </li>
+            </li>
 
-              <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
+            <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
 
-            
 
-              <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
 
-              <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
+            <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
 
-              <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+            <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
 
-              </li>
+            <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
 
-              </ul>
+            </li>
 
-        </div>
+        </ul>
 
-        <div class="sb2-2-1">
+    </div>
 
-            <h2>All  service</h2>
+    <div class="sb2-2-1">
 
-            <table class="table">
+        <h2>All service</h2>
 
-                <thead>
+        <table class="table">
+
+            <thead>
 
                 <tr>
 
@@ -48,7 +48,7 @@
 
                     <th>Title</th>
 
-                
+
 
                     <th>Description</th>
 
@@ -58,65 +58,60 @@
 
                 </tr>
 
-                </thead>
+            </thead>
 
-                <tbody>
+            <tbody>
 
                 @foreach($services as $key=>$service)
 
-                    <tr>
+                <tr>
 
-                        <td>{{$service->id}}</td>
+                    <td>{{$service->id}}</td>
 
-                        <td>{{$service->title}}</td>
+                    <td>{{$service->title}}</td>
 
-                     
 
-                        <td>{{$service->description}}</td>
 
-                        <td><a href="{{route('package_cat.edit',['action'=>'edit','id'=>$service->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <td>{{$service->description}}</td>
 
-                        </td>
+                    <td><a href="{{route('package_cat.edit',['action'=>'edit','id'=>$service->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
-                        <td>
+                    </td>
 
-                            <i onclick="confirm_delete('{{$service->id}}')" href="{{route('package_cat.delete',['id'=>$service->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
+                    <td>
 
-                        </td>
+                        <i onclick="confirm_delete('{{$service->id}}')" href="{{route('package_cat.delete',['id'=>$service->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
 
-                    </tr>
+                    </td>
+
+                </tr>
 
                 @endforeach
 
-                </tbody>
+            </tbody>
 
-            </table>
-
-        </div>
+        </table>
 
     </div>
 
+</div>
 
 
-    <script>
 
-        function confirm_delete(id) {
+<script>
+    function confirm_delete(id) {
 
-            let c = confirm("Do you want to delete this Package Category?");
+        let c = confirm("Do you want to delete this Package Category?");
 
-            if(c === true){
+        if (c === true) {
 
-                window.location.href ="{{url('activity/category/delete/')}}/"+id;
-
-            }
+            window.location.href = "{{asset('activity/category/delete/')}}/" + id;
 
         }
 
-    </script>
+    }
+</script>
 
 
 
 @endsection
-
-
-

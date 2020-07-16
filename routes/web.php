@@ -10,6 +10,7 @@
 |
  */
 use App\Http\Middleware\SessionCheck;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/',
 
@@ -382,7 +383,7 @@ Route::prefix('popularcities')->group(function () {
 		Route::get('get/', 'PopularCitiesController@index')->name('popularcities.get')->middleware(SessionCheck::class );
 		Route::get('/create_update/{action}/{id}', 'PopularCitiesController@create_edit')->name('popularcities.create')->middleware(SessionCheck::class );
 		Route::get('create_update/{action}/{id}', 'PopularCitiesController@create_edit')->name('popularcities.edit')->middleware(SessionCheck::class );
-		Route::post('store/{id}', 'PopularCitiesController@store_update')->name('popularcities.store')->middleware(SessionCheckk::class );
+		Route::post('store/{id}', 'PopularCitiesController@store_update')->name('popularcities.store')->middleware(SessionCheck::class );
 		Route::post('update/{id}', 'PopularCitiesController@store_update')->name('popularcities.update')->middleware(SessionCheck::class );
 		Route::get('delete/{id}', 'PopularCitiesController@delete')->name('popularcities.delete')->middleware(SessionCheck::class );
 		Route::get('all', 'PopularCitiesController@all')->name('popularcities.all');
@@ -592,7 +593,10 @@ Route::get('csrf', function () {
 Route::get('/cities', 'ahmed\SearchController@cities_index');
 /*book now page routes*/
 Route::get('/booknow', 'ahmed\BookNowController@index')->name('booknow');
-Route::get('/booknow/list/city/{city}', 'ahmed\BookNowController@list_city')->name('booknow.list.city');
+Route::get('/booknow/list/city/{city}/{type}', 'ahmed\BookNowController@list_city')->name('booknow.list.city');
+Route::get('/booknow/list/category/{category}/{type}', 'ahmed\BookNowController@list_category')->name('booknow.list.category');
+
+Route::get('/booknow/list/country/{country}/{type}', 'ahmed\BookNowController@list_country')->name('booknow.list.country');
 Route::get('/booknow/all_packages', 'ahmed\BookNowController@all_packages')->name('all_packages');
 Route::get('/booknow/all_activities', 'ahmed\BookNowController@all_activities')->name('all_activities');
 Route::get('/booknow/all_cruises', 'ahmed\BookNowController@all_cruises')->name('all_cruises');
@@ -631,3 +635,9 @@ Route::get('admin/services/getdelete/services/{id}', 'ahmed\ServiceController@po
 Route::get('visa/index', function () {
 		return view('visa/index');
 	});
+
+//NEW WORK
+Route::get('view_add_event/{action}', 'Event_Controller@viewAddEvent')->name('view.add.event')->middleware(SessionCheck::class );
+Route::post('view_add_event', 'Event_Controller@addEvent')->name('view.add.event.post')->middleware(SessionCheck::class );
+Route::get('view_update_event/{action}/{id}', 'Event_Controller@updateEvent')->name('view.update.event')->middleware(SessionCheck::class );
+Route::get('view_all_event', 'Event_Controller@allEvents')->name('view.all.events')->middleware(SessionCheck::class );

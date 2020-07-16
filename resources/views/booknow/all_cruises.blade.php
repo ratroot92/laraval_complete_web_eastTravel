@@ -599,31 +599,6 @@ label {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
-<< << << < HEAD
-
-function getCityNameForSearch(city) {
-    var type = window.location.pathname.split("/").pop()
-    console.log(type);
-    console.log(city);
-    window.location.href = "{{asset::to('booknow/list/city/')}}" + "/" + city + "/" + type;
-}
-
-
-function getCategoryNameForSearch(category) {
-    var type = window.location.pathname.split("/").pop()
-    console.log(type);
-    console.log(category);
-    window.location.href = "{{asset::to('booknow/list/category/')}}" + "/" + category + "/" + type;
-}
-
-function getCountryNameForSearch(country) {
-    var type = window.location.pathname.split("/").pop()
-    console.log(type);
-    console.log(country);
-    window.location.href = "{{asset::to('booknow/list/country/')}}" + "/" + country + "/" + type;
-} ===
-===
-=
 function getCityNameForSearch(city) {
     var type = window.location.pathname.split("/").pop()
     console.log(type);
@@ -941,16 +916,14 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-        $('#all_cities').on('click', function() {
-            window.location.href = "{{URL::to('booknow/all_cruises')}}";
-        });
-        $('#all_categories').on('click', function() {
-            window.location.href = "{{URL::to('booknow/all_cruises')}}";
-        });
-        $('#all_countries').on('click', function() {
-            window.location.href = "{{URL::to('booknow/all_cruises')}}";
-        });
-    }) >>>
-    >>>
-    > ce583d7daee2795669f3237ff747ab7f5f0f09a6
+    $('#all_cities').on('click', function() {
+        window.location.href = "{{URL::to('booknow/all_cruises')}}";
+    });
+    $('#all_categories').on('click', function() {
+        window.location.href = "{{URL::to('booknow/all_cruises')}}";
+    });
+    $('#all_countries').on('click', function() {
+        window.location.href = "{{URL::to('booknow/all_cruises')}}";
+    });
+})
 </script>

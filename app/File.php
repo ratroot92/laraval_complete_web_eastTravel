@@ -10,10 +10,5 @@ class File extends Model
 
 
     public $table         = 'files';
-	protected $primaryKey = 'id';
-
-
-
-
-
+    protected $primaryKey = 'id';
 }

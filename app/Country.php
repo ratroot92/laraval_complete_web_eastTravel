@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
+    protected $table = 'countries';
 
-    protected $table='countries';
-
-	 protected $fillable = [
-        'fkey', 'name', 'of','created_at','updated_at',
+    protected $fillable = [
+        'fkey', 'name', 'of', 'created_at', 'updated_at',
     ];
 
 
 
-     public function activity_city(){
-    	 return $this->belongsTo(Activity::class,'fkey','id');
+    public function activity_city()
+    {
+        return $this->belongsTo(Activity::class, 'fkey', 'id');
     }
 }

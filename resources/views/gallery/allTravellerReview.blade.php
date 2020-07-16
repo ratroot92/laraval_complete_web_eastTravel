@@ -2,7 +2,7 @@
 @section('content')
 <div class="sb2-2">
     <div class="sb2-2-2">
-          <ul>
+        <ul>
             <li>
                 <a href="{{url('/admin/dashboard')}}">
                     <i aria-hidden="true" class="fa fa-home">
@@ -17,7 +17,7 @@
             </li>
               <li class="active-bre">
                 <a href="{{route('gallery..videos.all')}}">
-                 <b>   All  Gallery Videos</b>
+                All  Gallery Videos
                 </a>
             </li>
              <li class="active-bre ">
@@ -28,7 +28,7 @@
 
              <li class="active-bre">
                 <a href="{{route('gallery.all.traveller.review')}}">
-                    All Traveller Review
+                   <b> All Traveller Review</b>
                 </a>
             </li>
             <li class="active-bre ">
@@ -45,7 +45,7 @@
     </div>
     <div class="sb2-2-1">
         <h2>
-        All Gallery Videos
+      All Traveller Review
         </h2>
         <table class="table">
             <thead>
@@ -96,13 +96,13 @@ src="{{$vid->url}}">
                         {{$vid->created_at}}
                     </td>
                     <td>
-                        <a class="sb2-2-1-edit" href="{{route('gallery.video.edit',['action'=>'edit','id'=>$vid->id])}}">
+ <a class="sb2-2-1-edit" href="{{route('gallery.update.traveller.review.get',['action'=>'edit','id'=>$vid->id])}}">
                             <i aria-hidden="true" class="fa fa-pencil-square-o">
                             </i>
                         </a>
                     </td>
                     <td>
-                        <i class="sb2-2-1-edit" href="{{url('/gallery/video/delete/',['id'=>$vid->id])}}" onclick="confirm_delete('{{$vid->id}}')">
+                        <i class="sb2-2-1-edit" href="{{url('/gallery/delete/travellerReviews/',['id'=>$vid->id])}}" onclick="confirm_delete('{{$vid->id}}')">
                         <i aria-hidden="true" class="fa fa-trash-o">
                         </i>
                         </i>
@@ -115,9 +115,9 @@ src="{{$vid->url}}">
 </div>
 <script>
 function confirm_delete(id) {
-let c = confirm("Do you want to delete this Video?");
+let c = confirm("Do you want to delete this Traveller review video ?");
 if(c === true){
-window.location.href ="{{url('/gallery/video/delete/')}}/"+id;
+window.location.href ="{{url('/gallery/delete/travellerReviews/')}}/"+id;
 }
 }
 </script>

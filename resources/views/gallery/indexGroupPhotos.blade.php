@@ -24,7 +24,7 @@
 	padding-left:10px;
 	padding-right: 10px;
 	margin-top: 100px;
-}
+	}
 	.custom-center{
 		display: flex;
 		justify-content: center;
@@ -40,10 +40,11 @@
 	<div class="row">
 	<div class="col-md-12 text center mb-5 custom-center tourz-search"style="height: 400px;">
 
-		<h1 class="text-white">Gallery  - <span class="special-color ">Photos </span></h1>
+		<h1 class="text-white">Gallery  - <span class="special-color ">Group Photos </span></h1>
 		<p class="text-capitalize text-white sub-heading">Explore a Different way to Travel </p>
 	</div>
-	<div class="row gallery-row">
+</div>
+<div class="row gallery-row">
 	@if(isset($photos))
 	@foreach($photos as $pics)
 	<div class="col-md-4 mt-3 mb-3 p-3">
@@ -61,7 +62,7 @@
 
 @else
 <p>
-	No Gallery Photos
+	No Group Photos
 </p>
 @endif
 </div>

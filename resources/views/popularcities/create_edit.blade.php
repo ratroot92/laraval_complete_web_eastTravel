@@ -64,13 +64,21 @@
                             </div>
                         </div>
 
-
+                        @if(ucfirst($action)=='Store')
 
                         <div class="row">
                             <div class="input-field col s12">
                                 <button type="submit" class="waves-effect waves-light btn-large">Create <i class="fa fa-paper-plane"></i></button>
                             </div>
                         </div>
+                        @else
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <button type="submit" class="waves-effect waves-light btn-large">Update <i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                        @endif
                     </form>
                 </div>
             </div>

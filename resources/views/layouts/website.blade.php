@@ -191,7 +191,7 @@ $path="../public/";
                         <div class="col-md-12">
                             <div class="ed-com-t1-left">
                                 <ul>
-                                    <li><a href="">Whatsapp/Viber: +421-917-251-996</a>
+                                    <li><a href="">Whatsappp/Viber: +421-917-251-996</a>
                                 </li>
                                 <!--<li><a href="#"><a href="mailto:info@eastravels.com">info@eastravels.com</a></a>-->
                                 <!--</li>-->
@@ -232,25 +232,29 @@ $path="../public/";
 </div>
 <!-- LOGO AND MENU SECTION -->
 <div class="top-logo" data-spy="affix" data-offset-top="250">
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="wed-logo">
+
+            <div class="main-menu ">
+                  <div class="wed-logo">
                 <a href="{{url('/')}}"><img src="{{url('/theme/travel')}}/images/logo.jpg"/></a>
             </div>
-            <div class="main-menu">
                 <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li class="admi-menu"><a href="{{url('/')}}">Home</a></li>
                     <li class="about-menu"><a href="{{url('/packages/list')}}" class="mm-arr">Packages</a></li>
                     <li class="admi-menu"><a href="{{url('/daytours/list')}}" class="mm-arr">Day Tour</a></li>
                     <li class="about-menu"><a href="{{url('/activities/list')}}" class="mm-arr">Activites</a></li>
                     <li class="admi-menu"><a href="{{url('/cruises/list')}}" class="mm-arr">Cruises</a></li>
                     <li class="about-menu"><a href="{{url('/transfers/list')}}" class="mm-arr">Transfer</a></li>
-                    <li><a href="{{route('events.show')}}">Events</a></li>
-                    <li><a href="{{url('/aboutus')}}">About us</a></li>
-                    <li><a href="{{url('/custominquiry')}}">Custom Inquiry</a></li>
-                     <li><a href="{{url('/booknow')}}">Booknow</a></li>
+                    <li class="admi-menu"><a href="{{url('/booknow')}}">Booknow</a></li>
+                    <li class="about-menu"><a href="{{route('events.show')}}">Events</a></li>
+                    <li class="admi-menu"><a href="{{url('/aboutus')}}">About us</a></li>
+                    <li class="about-menu"><a href="{{url('/custominquiry')}}">Custom Inquiry</a></li>
+                     <li class="about-menu"><a href="{{url('/contact/policy')}}">Contact Us </a></li>
                 </ul>
+
+
             </div>
         </div>
     </div>
@@ -297,10 +301,10 @@ $path="../public/";
                                 </ul>
                                 <h4 style="padding-top: 25px"><span>Gallery</span></h4>
                                 <ul style="list-style: none; margin-left: -40px">
-                                    <li><a href="">Traveller Reviews</a></li>
-                                    <li><a href="">Group Photos</a></li>
+                                    <li><a href="{{ route('gallery.traveller.review') }}">Traveller Reviews</a></li>
+                                    <li><a href="{{ route('gallery.index.group.photo.get') }}">Group Photos</a></li>
                                     <li><a href="{{url('gallery')}}">Gallery Videos</a></li>
-                                    <li><a href="{{url('gallery/photos')}}">Galery  Photos</a></li>
+                                    <li><a href="{{url('gallery/photos')}}">Gallery  Photos</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -325,10 +329,10 @@ $path="../public/";
                             <div class="col-md-6">
                                 <h4><span>Destination</span></h4>
                                 <ul style="list-style: none;display: grid;">
-                                    <li><a href="">Austria</a></li>
-                                    <li><a href="">Germany</a></li>
-                                    <li><a href="">Italy</a></li>
-                                    <li><a href="">France</a></li>
+                                    <li><a href="#">Austria</a></li>
+                                    <li><a href="#">Germany</a></li>
+                                    <li><a href="#">Italy</a></li>
+                                    <li><a href="#">France</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -429,29 +433,66 @@ $path="../public/";
 
     <script>
         $(document).ready(function(){
-            console.log("function ready ")
+          $('#search_div').hide();
+          //start of automcomplte cities
             $('#country_name').keyup(function(){
+               var selected_type=$("input[type='radio'][name='options']:checked").val();
+;
+               console.log(selected_type);
                 var query =$(this).val();
                 if(query!=''){
                     var _token=$('input[name="_token"]').val();
                     $.ajax({
                         url:"{{ url('autocomplete/fetch') }}",
                         method:"POST",
-                        data:{query:query,_token:_token},
+                        data:{query:query,_token:_token,selected_type:selected_type},
                         success:function(data){
                             $('#country_list').fadeIn();
                             $('#country_list').empty().html(data)
+                            console.log(data)
                         }
                     })
                 }
             })
 
-$('.search_list_name').on('click',function(){
-    console.log("cliked")
+$('#country_list').on('click','.search_list_name',function(){
+
     var value=$(this).text();
     console.log(value);
     $('#country_name').val(value);
+    $('#country_list').empty().html()
 })
+
+$('.list_3').on('click',function(){
+    console.log("cliked")
+var value=$(this).text();
+console.log(value);
+$('#country_name').val(value);
+setTimeout(function(){
+
+       $('#search_btn').trigger('click');
+
+
+
+    },1);
+
+})
+//end of automcomplte
+
+//start of search div
+
+$('#country_name').on('click',function(){
+var vis=document.getElementById('search_div');
+vis_status=vis.style.display;
+console.log(vis);
+if(vis_status == 'none'){
+vis_status=vis.style.display='block';
+}else{
+   vis_status=vis.style.display='none';
+}
+
+})
+
 
         })
     </script><script src="{{url('/theme/travel')}}/js/bootstrap.js"></script>
@@ -501,4 +542,5 @@ pageLanguage: 'en', includedLanguages: 'en,de,fr,sk,pl,cs,ar,hu,ru,it,zh-CN,zh-T
 
 
 </body>
+@include('layouts.alerts')
 </html>

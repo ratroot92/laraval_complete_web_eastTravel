@@ -2,6 +2,7 @@
 @section('content')
     <!--====== BANNER ==========-->
     <section>
+        @if(isset($activity->banner))
         <div class="rows inner_banner" style="background-image: url('{{$activity->banner}}');background-size: cover;">
             <!--<div class="container">-->
             <!--    <ul>-->
@@ -14,6 +15,8 @@
             <!--    <h3 style="color: white">{{$activity->name}} | @foreach($categories as $item){{$item->name}}/@endforeach</h3>-->
             <!--</div>-->
         </div>
+        @else
+        @endif
     </section>
     <!--====== TOUR DETAILS - BOOKING ==========-->
     <section>
@@ -612,8 +615,10 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-          <form action="/detail_inquiry" method="post">
+          <form action="{{ url('activity/detail_inquiry ') }}" method="post">
   {{csrf_field()}}
+  <input type="hidden" name="event_name" value="activity" />
+    <input type="hidden" name="event_id" value="{{ $activity->id }}" />
               <div class="form-group">
     <label for="name" style="font-size: 18px;">Name*:</label>
     <input type="text" class="form-control" placeholder="Your Name" id="name"  name="name"required>

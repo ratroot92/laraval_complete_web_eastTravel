@@ -350,7 +350,7 @@
                             <!--<a type="button" href="#" onclick="javascript:window.location='mailto:?subject=Email Inquiry&body=I want some more detail about the package below: ' + window.location;" class="btn btn-danger btn-lg" style="border-radius: 0px;font-weight: bold;font-size:12px; width: 100%">Email Inquiry</a>-->
                         </div>
                         <div class="col-sm-6" style="padding: 1px;">
-                             <a type="button" class="btn btn-danger btn-lg" style="border-radius: 0px;font-weight: bold;font-size:12px;width: 100%;"id="Btnpdf" href="{{URL::to('/transfer/downloadPDF/').'/'.$transfer->id}}">Download PDF</a>
+                             <a type="button" class="btn btn-danger btn-lg" style="border-radius: 0px;font-weight: bold;font-size:12px;width: 100%;"id="Btnpdf" href="{{URL::to('/transfers/downloadPDF/').'/'.$transfer->id}}">Download PDF</a>
                         </div>
                     </div>
                     <div class="tour_right tour_offer" style="background: transparent">
@@ -554,8 +554,10 @@
 
          <!-- Modal body -->
         <div class="modal-body">
-          <form action="/detail_inquiry" method="post">
+       <form action="{{ url('transfer/detail_inquiry ') }}" method="post">
   {{csrf_field()}}
+  <input type="hidden" name="event_name" value="transfer" />
+    <input type="hidden" name="event_id" value="{{ $transfer->id }}" />
               <div class="form-group">
     <label for="name" style="font-size: 18px;">Name*:</label>
     <input type="text" class="form-control" placeholder="Your Name" id="name"  name="name"required>

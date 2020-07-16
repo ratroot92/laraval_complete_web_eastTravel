@@ -4,9 +4,9 @@ namespace App\Http\Controllers\ahmed;
 
 use App\Http\Controllers\Controller;
 use App\Inquiry;
-
 use DB;
 use Illuminate\Http\Request;
+use Redirect;
 
 class email_controller extends Controller {
 
@@ -53,8 +53,8 @@ class email_controller extends Controller {
 		$inquiry->save();
 
 		$object = DB::table('inquiries')
-		->orderBy('created_at', 'desc')
-		->first();
+			->orderBy('created_at', 'desc')
+			->first();
 
 		// Mail::to('maliksblr92@gmail.com')->send(new SendMailable($object));
 
@@ -64,15 +64,33 @@ class email_controller extends Controller {
 
 	public function detail_inquiry($id) {
 
-		$date=$request->input('date');
-		$name=$request->input('name');
-		$email=$request->input('email');
-		$phone=$request->input('phone');
-		$adult=$request->input('adult');
-		$child=$request->input('child');
+		$date  = $request->input('date');
+		$name  = $request->input('name');
+		$email = $request->input('email');
+		$phone = $request->input('phone');
+		$adult = $request->input('adult');
+		$child = $request->input('child');
 
-				Mail::to('maliksblr92@gmail.com')->send(new detailMail($object));
-		return redirect('/')->with('success','Your Detailed Inquiry Has Been Submitted Successfully ');
+		//Mail::to('maliksblr92@gmail.com')->send(new detailMail($object));
+		//Mail::to('maliksblr92@gmail.com')->send(new SendMailable($object));
+		return redirect('/')->with('success', 'Your Detailed Inquiry Has Been Submitted Successfully ');
+	}
+
+	public function event_detail_inquiry(Request $request) {
+
+		$event_name = $request->input('event_name');
+		$event_id   = $request->input('event_id');
+		$date       = $request->input('date');
+		$date       = $request->input('date');
+		$name       = $request->input('name');
+		$email      = $request->input('email');
+		$phone      = $request->input('phone');
+		$adult      = $request->input('adult');
+		$child      = $request->input('child');
+
+		//Mail::to('maliksblr92@gmail.com')->send(new detailMail($object));
+		//Mail::to('maliksblr92@gmail.com')->send(new SendMailable($object));
+		return Redirect::back()->with('success', 'Email Inquiry dispatched successfully');
 	}
 
 }

@@ -613,8 +613,10 @@
 
        <!-- Modal body -->
         <div class="modal-body">
-          <form action="/detail_inquiry" method="post">
-@csrf
+         <form action="{{ url('cruise/detail_inquiry ') }}" method="post">
+  {{csrf_field()}}
+  <input type="hidden" name="event_name" value="cruise" />
+    <input type="hidden" name="event_id" value="{{ $cruise->id }}" />
               <div class="form-group">
     <label for="name" style="font-size: 18px;">Name*:</label>
     <input type="text" class="form-control" placeholder="Your Name" id="name"  name="name"required>

@@ -16,8 +16,7 @@ Route::get('/',
 function () {
 		$data['events'] = DB::table('events')->where(DB::raw('MONTH(date)'), date('m'))->get();
 		$data['sightseeing'] = DB::table('sightseeing')->where(DB::raw('MONTH(sight_date)'), date('m'))->get();
-		$result = DB::table('popularcities')->limit('10')->get();
-		$cities = (array) $result;
+		$cities = DB::table('popularcities')->limit('10')->get()->toArray();
 		$Poland = DB::table('popularcities')->where('country', 'Poland')->limit('5')->get();
 		$Poland_cities = (array) $Poland;
 		$CzechRepublic = DB::table('popularcities')->where('country', 'Czech Republic')->limit('5')->get();
@@ -385,7 +384,7 @@ Route::prefix('popularcities')->group(function () {
 		Route::get('get/', 'PopularCitiesController@index')->name('popularcities.get')->middleware(SessionCheck::class );
 		Route::get('/create_update/{action}/{id}', 'PopularCitiesController@create_edit')->name('popularcities.create')->middleware(SessionCheck::class );
 		Route::get('create_update/{action}/{id}', 'PopularCitiesController@create_edit')->name('popularcities.edit')->middleware(SessionCheck::class );
-		Route::post('store/{id}', 'PopularCitiesController@store_update')->name('popularcities.store')->middleware(SessionCheckk::class );
+		Route::post('store/{id}', 'PopularCitiesController@store_update')->name('popularcities.store')->middleware(SessionCheck::class );
 		Route::post('update/{id}', 'PopularCitiesController@store_update')->name('popularcities.update')->middleware(SessionCheck::class );
 		Route::get('delete/{id}', 'PopularCitiesController@delete')->name('popularcities.delete')->middleware(SessionCheck::class );
 		Route::get('all', 'PopularCitiesController@all')->name('popularcities.all');
@@ -418,6 +417,7 @@ Route::prefix('websitebuilder')->group(function () {
 		Route::get('delete/{id}', 'PopularCitiesController@delete')->name('popularcities.delete')->middleware(SessionCheck::class );
 		//Route::get('map/{lng}/{lat}/{city}' , 'PackagesController@geolocation')->name('geolocate_packages')->middleware(SessionCheck::class);
 	});
+
 /*end webiste builder */
 Route::get('/en/page/payment', function () {
 		return view('website.payments');
@@ -535,11 +535,11 @@ Route::post('/submitinquiry', function () {
 		return back()->with('submit');
 	});
 Route::post('/submitinquiry_email', 'ahmed\email_controller@insert_email_inquiry');
-Route::post('activity/detail_inquiry', 'ahmed\email_controller@activity_detail_inquiry');
-Route::post('cruise/detail_inquiry', 'ahmed\email_controller@cruise_detail_inquiry');
-Route::post('daytour/detail_inquiry', 'ahmed\email_controller@daytour_detail_inquiry');
-Route::post('transfer/detail_inquiry', 'ahmed\email_controller@transfer_detail_inquiry');
-Route::post('package/detail_inquiry', 'ahmed\email_controller@package_detail_inquiry');
+Route::post('activity/detail_inquiry', 'ahmed\email_controller@event_detail_inquiry');
+Route::post('cruise/detail_inquiry', 'ahmed\email_controller@event_detail_inquiry');
+Route::post('daytour/detail_inquiry', 'ahmed\email_controller@event_detail_inquiry');
+Route::post('transfer/detail_inquiry', 'ahmed\email_controller@event_detail_inquiry');
+Route::post('package/detail_inquiry', 'ahmed\email_controller@event_detail_inquiry');
 Route::get('inquiries/get/packages', function () {
 		$packages = DB::table('inquiries')
 			->where('type', 'Tour Package')
@@ -595,12 +595,15 @@ Route::get('csrf', function () {
 Route::get('/cities', 'ahmed\SearchController@cities_index');
 /*book now page routes*/
 Route::get('/booknow', 'ahmed\BookNowController@index')->name('booknow');
-Route::get('/booknow/list/city/{city}/{type}', 'ahmed\BookNowController@list_city')->name('booknow.list.city');
+
+Route::get('/booknow/list/city/{city}/{type}', 'ahmed\BookNowController@list_city')->name('booknow.list.city, $city,$type');
 Route::get('/booknow/list/category/{category}/{type}', 'ahmed\BookNowController@list_category')->name('booknow.list.category');
 
 Route::get('/booknow/list/country/{country}/{type}', 'ahmed\BookNowController@list_country')->name('booknow.list.country');
+Route::get('/booknow/list/price/{minprice}/{maxprice}/{type}', 'ahmed\BookNowController@list_price')->name('booknow.list.price');
 Route::get('/booknow/all_packages', 'ahmed\BookNowController@all_packages')->name('all_packages');
 Route::get('/booknow/all_activities', 'ahmed\BookNowController@all_activities')->name('all_activities');
+Route::get('/booknow/test/{city}/{type}', 'ahmed\BookNowController@test')->name('test');
 Route::get('/booknow/all_cruises', 'ahmed\BookNowController@all_cruises')->name('all_cruises');
 Route::get('/booknow/all_transfers', 'ahmed\BookNowController@all_transfers')->name('all_transfers');
 Route::get('/booknow/all_daytours', 'ahmed\BookNowController@all_daytours')->name('all_daytours');
@@ -609,7 +612,7 @@ Route::get('/booknow/grid', 'ahmed\BookNowController@index_grid')->name('booknow
 
 Route::get('/gallery', 'ahmed\GalleryController@index');
 Route::get('/gallery/add', 'ahmed\GalleryController@add')->name('gallery.add');
-Route::post('/gallery/add_video', 'ahmed\GalleryController@add_url');
+Route::post('/gallery/add_video', 'ahmed\GalleryController@add_url')->name('gallery.add.video');
 Route::get('/gallery/all/videos', 'ahmed\GalleryController@all_videos')->name('gallery..videos.all');
 Route::get('/gallery/video/delete/{id}', 'ahmed\GalleryController@delete_video')->name('gallery.video.delete');
 Route::get('/gallery/video/edit/{id}', 'ahmed\GalleryController@edit_video')->name('gallery.video.edit');
@@ -622,6 +625,27 @@ Route::get('/gallery/all_photos', 'ahmed\GalleryController@all_photos')->name('g
 Route::get('/gallery/delete/photo/{id}', 'ahmed\GalleryController@delete_photo')->name('gallery.del.photo');
 Route::get('/gallery/edit_view/photo/{id}', 'ahmed\GalleryController@editview_photo')->name('gallery.editview.photo');
 Route::post('/gallery/edit/photo/', 'ahmed\GalleryController@edit_photo')->name('gallery.edit.photo');
+
+// Add Traveller Reviews
+Route::get('/gallery/add/travellerReviews', 'ahmed\GalleryController@addTravellerReviewGET')->name('gallery.add.traveller.review')->middleware(SessionCheck::class );
+Route::post('/gallery/add/travellerReviews', 'ahmed\GalleryController@addTravellerReviewPOST')->name('gallery.add.traveller.review')->middleware(SessionCheck::class );
+Route::get('/gallery/all/travellerReviews', 'ahmed\GalleryController@allTravellerReviewGET')->name('gallery.all.traveller.review')->middleware(SessionCheck::class );
+Route::get('/gallery/update/travellerReviews/{id}', 'ahmed\GalleryController@updateTravellerReviewGET')->name('gallery.update.traveller.review.get')->middleware(SessionCheck::class );
+Route::post('/gallery/update/travellerReviews', 'ahmed\GalleryController@updateTravellerReviewPOST')->name('gallery.update.traveller.review')->middleware(SessionCheck::class );
+Route::get('/gallery/delete/travellerReviews/{id}', 'ahmed\GalleryController@deleteTravellerReviewGET')->name('gallery.update.traveller.review.delete')->middleware(SessionCheck::class );
+Route::get('/gallery/travellerReviews', 'ahmed\GalleryController@galleryTravellerReviewGET')->name('gallery.traveller.review');
+
+// End Traveller Reviews
+//Add group photos
+Route::get('/gallery/add/groupPhoto', 'ahmed\GalleryController@addGroupPhotoGET')->name('gallery.add.group.photo.get')->middleware(SessionCheck::class );
+Route::post('/gallery/add/groupPhoto', 'ahmed\GalleryController@addGroupPhotoPOST')->name('gallery.add.group.photo.post')->middleware(SessionCheck::class );
+Route::get('/gallery/all/groupPhoto', 'ahmed\GalleryController@allGroupPhotoGET')->name('gallery.all.group.photo.get')->middleware(SessionCheck::class );
+Route::get('/gallery/delete/groupPhoto/{id}', 'ahmed\GalleryController@deleteGroupPhotoGET')->name('gallery.delete.group.photo.get')->middleware(SessionCheck::class );
+Route::get('/gallery/update/groupPhoto/{id}', 'ahmed\GalleryController@updateGroupPhotoGET')->name('gallery.update.group.photo.get')->middleware(SessionCheck::class );
+Route::post('/gallery/update/groupPhoto', 'ahmed\GalleryController@updateGroupPhotoPOST')->name('gallery.update.group.photo.post')->middleware(SessionCheck::class );
+Route::get('/gallery/update/groupPhoto', 'ahmed\GalleryController@indexGroupPhotoPOST')->name('gallery.index.group.photo.get');
+//End Group photos
+
 //services page routes
 Route::get('services/index', 'ahmed\ServiceController@index')->name('services.get.index');
 Route::get('admin/services/add', 'ahmed\ServiceController@admin_index')->name('admin.get.index');

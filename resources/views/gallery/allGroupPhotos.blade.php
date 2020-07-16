@@ -8,7 +8,7 @@
 
         <div class="sb2-2-2">
 
-             <ul>
+                <ul>
             <li>
                 <a href="{{url('/admin/dashboard')}}">
                     <i aria-hidden="true" class="fa fa-home">
@@ -18,7 +18,7 @@
             </li>
             <li class="active-bre">
                 <a href="{{route('gallery.add')}}">
-                   Add Gallery Videos
+                  Add Gallery Videos
                 </a>
             </li>
               <li class="active-bre">
@@ -39,12 +39,22 @@
             </li>
             <li class="active-bre ">
                 <a href="{{route('gallery.addphotos')}}">
-                  Add  Gallery Photos
+                   Add  Gallery Photos
                 </a>
             </li>
                <li class="active-bre ">
                 <a href="{{route('gallery.all_photos')}}">
-                   <b>All Gallery Photos</b>
+                   All Gallery Photos
+                </a>
+            </li>
+             <li class="active-bre ">
+                <a href="{{route('gallery.add.group.photo.get')}}">
+                 Add Group Photo
+                </a>
+            </li>
+             <li class="active-bre ">
+                <a href="{{route('gallery.all.group.photo.get')}}">
+                  <b> All Group Photo</b>
                 </a>
             </li>
         </ul>
@@ -53,7 +63,7 @@
 
         <div class="sb2-2-1">
 
-            <h2>All Gallery Photos</h2>
+            <h2>All Group Photos</h2>
 
             <table class="table">
 
@@ -91,13 +101,13 @@
                         <td><image src="{{$photo->url}}" height="80" width="200" class="img-fluid"/></td>
                         <td>{{$photo->created_at}}</td>
 
-                        <td><a href="{{route('gallery.editview.photo',['action'=>'edit','id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <td><a href="{{route('gallery.update.group.photo.get',['action'=>'edit','id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
                         </td>
 
                         <td>
 
-                            <i onclick="confirm_delete('{{$photo->id}}')" href="{{route('package_cat.delete',['id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
+                            <i onclick="confirm_delete('{{$photo->id}}')" href="{{route('gallery.delete.group.photo.get',['id'=>$photo->id])}}" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></i>
 
                         </td>
 
@@ -123,7 +133,7 @@
 
             if(c === true){
 
-                window.location.href ="{{url('/gallery/delete/photo/')}}/"+id;
+                window.location.href ="{{url('/gallery/delete/groupPhoto/')}}/"+id;
 
             }
 

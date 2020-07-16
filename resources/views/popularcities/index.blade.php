@@ -3,7 +3,7 @@
 @section('content')
 
     <style>
-       
+
         #desc{
   width: 20%!important;
         }
@@ -28,7 +28,9 @@
                     <th>Country Name</th>
                     <th id="desc">Description</th>
                     <th>Image</th>
+                     <th>Created at</th>
                     <th>Edit</th>
+
                     <th>Delete</th>
                 </tr>
                 </thead>

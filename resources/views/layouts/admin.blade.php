@@ -272,19 +272,30 @@
                      <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-umbrella" aria-hidden="true"></i> Gallery</a>
                         <div class="collapsible-body left-sub-menu">
                             <ul>
-                                <li><a href="{{url('/gallery/add')}}">Add Videos</a>
+                                <li><a href="{{url('/gallery/add')}}">Add Gallery Video</a>
                                 </li>
-                                <li><a href="{{url('/gallery/all/videos')}}">All Videos</a>
+                                <li><a href="{{url('/gallery/all/videos')}}">All Gallery Videos</a>
                                 </li>
-                                <li><a href="{{url('/gallery/add_photos')}}">Add Photos </a>
+                                <li><a href="{{url('/gallery/add_photos')}}">Add Gallery Photo </a>
                                 </li>
-                               <li><a href="{{route('gallery.all_photos')}}">All Photos</a>
+                               <li><a href="{{route('gallery.all_photos')}}">All Gallery Photos</a>
+                                </li>
+                                 <li><a href="{{url('/gallery/add/travellerReviews')}}">Add Traveller Reviews </a>
+                                </li>
+                                <li><a href="{{url('/gallery/all/travellerReviews')}}">All Traveller Reviews </a>
+                                </li>
+
+                                 <li><a href="{{route('gallery.add.group.photo.get')}}">Add Group Photo  </a>
+                                </li>
+                                 <li><a href="{{route('gallery.all.group.photo.get')}}">All Group Photos </a>
                                 </li>
 
 
                             </ul>
                         </div>
                     </li>
+
+
 
 
                     <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-umbrella" aria-hidden="true"></i> Services</a>
@@ -292,12 +303,12 @@
                             <ul>
                                 <li><a href="{{url('admin/services/view/vision')}}">Add Service</a>
                                 </li>
-                               
+
 
                                <li><a href="{{url('admin/services/all/services')}}">All Services</a>
                                 </li>
-                               
-                               
+
+
 
 
                             </ul>
@@ -308,7 +319,7 @@
 
 
 
-               
+
 
                      <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-umbrella" aria-hidden="true"></i> Website Builder</a>
                         <div class="collapsible-body left-sub-menu">

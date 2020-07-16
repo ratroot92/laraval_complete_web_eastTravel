@@ -3,9 +3,12 @@
 
 
 @section('content')
+<style>
+
+</style>
 <div class="sb2-2">
     <div class="sb2-2-2">
-                <ul>
+        <ul>
             <li>
                 <a href="{{url('/admin/dashboard')}}">
                     <i aria-hidden="true" class="fa fa-home">
@@ -15,7 +18,7 @@
             </li>
             <li class="active-bre">
                 <a href="{{route('gallery.add')}}">
-                  <b>  Add Gallery Videos</b>
+                    Add Gallery Videos
                 </a>
             </li>
               <li class="active-bre">
@@ -25,7 +28,7 @@
             </li>
              <li class="active-bre ">
                 <a class="active" href="{{route('gallery.add.traveller.review')}}">
-                   Add Traveller Review
+                  <b>  Add Traveller Review</b>
                 </a>
             </li>
 
@@ -50,14 +53,14 @@
         <div class="box-inn-sp">
             <div class="inn-title">
                 <h4>
-                   Add  Gallery Video
+               Add Traveller Review
                 </h4>
                 <p>
                     Airtport Hotels The Right Way To Start A Short Break Holiday
                 </p>
             </div>
             <div class="bor">
-                <form action="{{url('gallery/add_video')}}" method="post">
+                <form action="{{url('/gallery/add/travellerReviews')}}" method="post">
                     {{csrf_field()}}
                     <div class="row">
                         <div class="input-field col s12">
@@ -90,7 +93,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <button class="waves-effect waves-light btn-large" type="submit">
-                                Add Gallery Video
+                                Add Traveller Review
                                 <i class="fa fa-paper-plane">
                                 </i>
                             </button>

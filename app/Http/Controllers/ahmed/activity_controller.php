@@ -174,6 +174,7 @@ class activity_controller extends Controller {
 				$countries = $request->input('country');
 				if (count($countries) > 0) {
 					foreach ($countries as $country) {
+						$country = trim($country, " ");
 						Country::create([
 								'fkey' => $last_activity_id,
 								'name' => $country,
@@ -185,6 +186,7 @@ class activity_controller extends Controller {
 				$icons = $request->input('icons');
 				if (count($icons) > 0) {
 					foreach ($icons as $icon) {
+						$icon = trim($icon, " ");
 						Package_Icon::create([
 								'fkey' => $last_activity_id,
 								'name' => $icon,
@@ -196,6 +198,7 @@ class activity_controller extends Controller {
 				$categories = $request->input('cat');
 				if (count($categories) > 0) {
 					foreach ($categories as $category) {
+						$category = trim($category, " ");
 						Category::create([
 								'fkey' => $last_activity_id,
 								'name' => $category,
@@ -206,6 +209,7 @@ class activity_controller extends Controller {
 				$cities = explode(",", $request->input('city'));
 				if (count($cities) > 0) {
 					foreach ($cities as $city) {
+						$city = trim($city, " ");
 						City::create([
 								'fkey' => $last_activity_id,
 								'name' => $city,

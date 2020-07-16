@@ -8,6 +8,43 @@ justify-content: center;
 align-content: center;
 height: auto;
 }
+.radio-toolbar {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+margin-bottom:5px;
+margin-top: 0px;
+}
+.radio-toolbar input[type="radio"] {
+opacity: 0;
+position: fixed;
+width: 0;
+}
+.radio-toolbar a {
+display: inline-block !important;
+background-color: #fff;
+padding: 7px 30px;
+padding-left: 18px !important;
+font-size: 15px !important;
+border: none;
+border-radius: 0px;
+height: auto !important;
+border: 1px solid #000;
+}
+.radio-toolbar a:hover {
+background-color: #e72a43;
+color: #ffffff;
+}
+.radio-toolbar input[type="radio"]:focus + a {
+border: 2px dashed #444;
+}
+.radio-toolbar input[type="radio"]:checked + a {
+background-color: #e72a43;
+border-color: #e3263f;
+border: none;
+color: #fff;
+}
 </style>
 <div class="container-fluid">
 	<div class="row">
@@ -251,15 +288,31 @@ height: auto;
 	</div>
 </div>
 </div>
+<style>
+
+
+</style>
 <div class="col-md-9 " id="searchRendering">
+
+
 <div class="row">
-	<div class="col-md-12 d-flex flex-row justify-content-around align-items-center">
-		<a href="{{route('booknow')}}" id="all" class="all" >ALL</a>
-		<a href="{{route('all_packages')}}" id="packages" class="packages" >Packages</a>
-		<a href="{{route('all_transfers')}}" id="transfers" class="transfers" >Transfers</a>
-		<a href="{{route('all_cruises')}}" id="cruises" class="cruises" >Cruises</a>
-		<a href="{{route('all_daytours')}}" id="daytours" class="daytours" >Day Tours</a>
-		<a href="{{route('all_activities')}}" id="activities" class="activities" >Activities</a>
+	<div class="col-md-12">
+		<div class="radio-toolbar border-dark d-fle">
+
+
+             	<input type="radio" id="radioPackages" name="options" value="1" checked>
+             	<a class="custom_anchors "  href="{{route('booknow')}}" id="all" class="all" >All</a>
+             	<input type="radio" id="radioPackages" name="options" value="1" >
+             	 <a class="custom_anchors" href="{{route('all_packages')}}" id="packages" class="packages" >Packages</a>
+                <input type="radio" id="radioDaytours" name="options" value="2">
+               	<a class="custom_anchors" href="{{route('all_daytours')}}" id="daytours" class="daytours" >Day Tours</a>
+                <input type="radio" id="radioActivites" name="options" value="3">
+               <a class="custom_anchors" href="{{route('all_activities')}}" id="activities" class="activities" >Activities</a>
+                <input type="radio" id="radioCruises" name="options" value="4">
+               <a class="custom_anchors" href="{{route('all_cruises')}}" id="cruises" class="cruises" >Cruises</a>
+                <input type="radio" id="radioTransfer" name="options" value="5">
+               <a class="custom_anchors" href="{{route('all_transfers')}}" id="transfers" class="transfers" >Transfers</a>
+              </div>
 	</div>
 </div>
 @foreach($activities as $key=>$item)

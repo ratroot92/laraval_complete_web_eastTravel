@@ -110,6 +110,14 @@ border-color: #e3263f;
 border: none;
 color: #fff;
 }
+/*autocomplete html*/
+#country_list li a {
+  font-size: 12px!important;
+  font-weight: bold;
+}
+li{
+  cursor: pointer!important;
+}
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -136,14 +144,15 @@ color: #fff;
                 <input type="radio" id="radioActivites" name="options" value="3">
                 <label for="radioActivites">Activites</label>
                 <input type="radio" id="radioCruises" name="options" value="4">
-                <label for="radioCruises">DayTour</label>
+                <label for="radioCruises">Cruises</label>
                 <input type="radio" id="radioTransfer" name="options" value="5">
-                <label for="radioTransfer">Activites</label>
+                <label for="radioTransfer">Transfers</label>
               </div>
-              <input type="search"  name="myCountry" id="select-search" class= " typeahead form-control " autocomplete="off" placeholder="Enter Destination (city or country)"  />
+              <input type="text" name="country_name" id="country_name" class= " typeahead form-control " autocomplete="off" placeholder="Enter Destination (city or country)"  />
+             {{ csrf_field() }}
 
-
-              <div style="text-align: left;width:100%;background-color:white!important;position: absolute; z-index:99;    padding: 10px 10px;" id="search_div">
+              <div id="country_list"></div>
+<div style="text-align: left;width:100%;background-color:white!important;position: absolute; z-index:99;    padding: 10px 10px;" id="search_div">
                 <a href="{{url('/cities')}}" ><h2 style="color: #253d52; padding-left: 15px">Popular <span style="color: #f4364f;font-size: 2rem;">Cities</span></h2>
               </a>
               <!-- put row here -->
@@ -346,6 +355,10 @@ color: #fff;
 
 
 
+
+
+
+
           </div>
           <!--<div class="col-sm-2 col-lg-2" class="autocomplete" style="padding: 0px;margin: 0px">-->
           <!--    <div class="form-group" style="background-color:white">-->
@@ -361,7 +374,7 @@ color: #fff;
           <!--    </div>-->
           <!--</div>-->
           <div class="col-sm-12 col-lg-4" style="display: flex; align-items: flex-end;">
-            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn" style="width: 100%;">
+            <input type="submit" value="search" id="search_btn" class="waves-effect waves-light tourz-sear-btn" style="width: 100%;">
           </div>
         </form>
         <div class="tourz-hom-ser">
@@ -383,6 +396,9 @@ color: #fff;
             </li>
             <li>
               <a href="{{url('/daytours/list')}}" class="waves-effect waves-light  tourz-pop-ser-btn wow fadeInUp" data-wow-duration="1.5s"><img style="" src="{{url('theme/travel/')}}/images/icon/event.png" alt=""> Events</a>
+            </li>
+             <li>
+              <a href="{{url('/booknow')}}" class="waves-effect waves-light tourz-pop-ser-btn wow fadeInUp" data-wow-duration="0.5s"><img style="" src="{{url('theme/travel/')}}/images/icon/dis2.png" alt="">Booknow</a>
             </li>
           </ul>
         </div>
@@ -711,6 +727,7 @@ Cruises</span></h2>
 <p>We offer tours all over Europe find the perfect tours that best suits your needs.</p>
 </div>
 <!-- CITY -->
+@if(count($cities)>5)
 @foreach($cities as $item)
 <div class="col-md-6">
 <a href="">
@@ -782,8 +799,72 @@ Cruises</span></h2>
 </a>
 </div>
 @endforeach
+@else
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://1.bp.blogspot.com/-xp-Lh56Y3OU/VWXZt2cZqxI/AAAAAAAAQpM/8QaXlnwyvfc/s1600/most-beautiful-places-to-visit-in-Spain-2.jpg" alt="" title="Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center. It's home to Lenin’s Mausoleum, the State Historical Museum's comprehensive collection and St. Basil’s Cathedral, known for its colorful, onion-shaped domes." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Moscow</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0cHMNmEDwm6liafyMIl_A4qO-CEj6fwVY3xNQbDxyncBfHAjG&usqp=CAU" alt="" title="Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum)." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Tokyo</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://1.bp.blogspot.com/-xp-Lh56Y3OU/VWXZt2cZqxI/AAAAAAAAQpM/8QaXlnwyvfc/s1600/most-beautiful-places-to-visit-in-Spain-2.jpg" alt="" title="Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center. It's home to Lenin’s Mausoleum, the State Historical Museum's comprehensive collection and St. Basil’s Cathedral, known for its colorful, onion-shaped domes." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Moscow</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0cHMNmEDwm6liafyMIl_A4qO-CEj6fwVY3xNQbDxyncBfHAjG&usqp=CAU" alt="" title="Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum)." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Tokyo</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+@endif
 <div style="height:300px">
 </div>
+@if(count($cities)>5)
 @foreach($cities as $item)
 <div class="col-md-3 ">
 <a href="">
@@ -894,8 +975,71 @@ Cruises</span></h2>
 </a>
 </div>
 @endforeach
+@else
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://1.bp.blogspot.com/-xp-Lh56Y3OU/VWXZt2cZqxI/AAAAAAAAQpM/8QaXlnwyvfc/s1600/most-beautiful-places-to-visit-in-Spain-2.jpg" alt="" title="Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center. It's home to Lenin’s Mausoleum, the State Historical Museum's comprehensive collection and St. Basil’s Cathedral, known for its colorful, onion-shaped domes." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Moscow</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0cHMNmEDwm6liafyMIl_A4qO-CEj6fwVY3xNQbDxyncBfHAjG&usqp=CAU" alt="" title="Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum)." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Tokyo</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://1.bp.blogspot.com/-xp-Lh56Y3OU/VWXZt2cZqxI/AAAAAAAAQpM/8QaXlnwyvfc/s1600/most-beautiful-places-to-visit-in-Spain-2.jpg" alt="" title="Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center. It's home to Lenin’s Mausoleum, the State Historical Museum's comprehensive collection and St. Basil’s Cathedral, known for its colorful, onion-shaped domes." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Moscow</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+{{-- start --}}
+<div class="col-md-3 ">
+<a href="">
+<div class="tour-mig-like-com">
+  <div class="tour-mig-lc-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0cHMNmEDwm6liafyMIl_A4qO-CEj6fwVY3xNQbDxyncBfHAjG&usqp=CAU" alt="" title="Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum)." style="height: 200px;width: 100%;">
+  {{--<img src="{{url('/theme/travel')}}/images/listing/home.jpg" alt="">--}} </div>
+  <div class="tour-mig-lc-con">
+    <h5>Tokyo</h5>
+
+  </div>
+</div>
+</a>
+</div>
+{{-- end --}}
+@endif
 <div class="col-md-12 col-md-offset-2 mx-auto text-center" style="margin: 15px 0;">
-<a class="link-btn" href="http://dvenza.com/cities"> All Destinations</a>
+<a class="link-btn" href="{{ route('popularcities.all') }}"> All Destinations</a>
 </div>
 </div>
 </div>
@@ -906,8 +1050,8 @@ Cruises</span></h2>
 </p>
 </div>
 @endsection
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+{{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script> --}}
 {{-- <script>
 window.fbAsyncInit = function() {
 FB.init({
@@ -944,35 +1088,7 @@ js = d.createElement(s);
 js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script>
-$(document).ready(function(){
-$('#search_div').hide();
-$('#search_div').on('focusout', function(){
-$('#search_div').fadeOut(2000);
-})
-$('#select-search').on('click', function(){
-$('#search_div').show();
-})
-$('.list_3').on('click',function(){
-var data_value=$(this).attr('id');
-console.log("asd"+data_value)
-$('#select-search').val('');
-$('#select-search').val(data_value);
-$('#search_div').fadeOut(1000);
-})
-});
-</script>
-<script>
-$(document).mouseup(function(e)
-{
-var container = $("#search_div");
-// if the target of the click isn't the container nor a descendant of the container
-if (!container.is(e.target) && container.has(e.target).length === 0)
-{
-container.fadeOut(1000);
-}
-});
-</script>
+
 {{-- <div class="fb-customerchat"
 page_id="411933035571511">
 </div> --}}

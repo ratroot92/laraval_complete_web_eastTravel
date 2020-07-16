@@ -6,7 +6,7 @@
         <div class="tr-regi-form">
             <h4>Create an Account</h4>
             <p>It's free and always will be.</p>
-            <form class="col s12" action="{{asset('auth/signup')}}" method="post">
+            <form class="col s12" action="{{url('auth/signup')}}" method="post">
                 @csrf
                 <div class="row">
                     <div class="input-field col m6 s12">
@@ -44,4 +44,4 @@
 </section>
 <!--END DASHBOARD-->
 <!--====== TIPS BEFORE TRAVEL ==========-->
-@endsection
+    @endsection

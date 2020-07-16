@@ -1,67 +1,67 @@
 @extends('layouts.admin')
-<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<script src="{{url('ckeditor/ckeditor.js')}}"></script>
 @section('content')
 <div class="sb2-2">
     <div class="sb2-2-2">
         <ul>
-            <li><a href="{{asset('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-            </li>
-            <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
-            </li>
-            <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
+              <li><a href="{{url('/admin/dashboard')}}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+              </li>
+              <li class="active-bre"><a href="{{route('activity.view')}}"> All Activities</a>
+              </li>
+              <li class="active-bre"><a href="{{route('activity.add')}}"> Add New Activity</a></li>
 
-            <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
-            <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
-            <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
-            </li>
-        </ul>
-    </div>
+              <li class="active-bre"><a href="{{route('activity.category')}}">All Activity Categories</a>
+              <li class="active-bre"><a href="{{route('activity.addcategory')}}">Add Activity Categories</a>
+              <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+              </li>
+              </ul>
+</div>
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-    </div>
+</div>
 
-    <div class="sb2-2-add-blog sb2-2-1">
-        <div class="box-inn-sp">
-            <div class="inn-title">
-                <h4>{{ucfirst($action ?? '' )}} Activity</h4>
-                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
-            </div>
+<div class="sb2-2-add-blog sb2-2-1">
+<div class="box-inn-sp">
+<div class="inn-title">
+    <h4>{{ucfirst($action ?? '' )}} Activity</h4>
+    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+</div>
 
-            <div class="bor">
-                <form method="post" enctype="multipart/form-data" action="{{asset('admin/services/update/vision')}}">
-                    {{csrf_field()}}
-
-
-
-
-
-                    <div class="row">
-                        <br>
-                        <label for="textarea1">Vision</label>
-                        <div class="input-field col s12 font-weight-bold">
-                            <textarea id="vision" class="ckeditor" name="vision" required="required"></textarea>
-                        </div>
-                    </div>
-
-
-
-                </form>
+<div class="bor">
+    <form method="post" enctype="multipart/form-data" action="{{url('admin/services/update/vision')}}">
+        {{csrf_field()}}
 
 
 
 
 
-
-
-
-
-
-
-
+<div class="row">
+            <br>
+            <label for="textarea1">Vision</label>
+            <div class="input-field col s12 font-weight-bold">
+                <textarea id="vision" class="ckeditor" name="vision" required="required" ></textarea>
             </div>
         </div>
-    </div>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
 </div>
 
 @endsection

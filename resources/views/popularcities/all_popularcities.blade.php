@@ -1,16 +1,22 @@
 @extends('layouts.website')
 @section('content')
 <style>
-	.set-overflow{
-		height: 700px;
-	overflow-y:auto;
-	}
+
 </style>
-<div style="text-align: left;width:100%;background-color:white!important;position: absolute; z-index:99;    padding: 10px 10px;" id="search_div">
-	<a href="{{url('/cities')}}" ><h2 style="color: #253d52; padding-left: 15px">Popular <span style="color: #f4364f;font-size: 2rem;">Cities</span></h2>
+
+
+	<div class="container-fluid"style="padding-right: 150px;padding-left:150px;">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5">
+				<a href="{{ route('popularcities.all') }}" ><h2 style="color: #253d52; padding-left: 15px;font-size: 36px;">Popular <span style="color: #f4364f;font-size: 36px;">Cities</span></h2>
 </a>
+			</div>
+		</div>
+
 <!-- put row here -->
-<div class="row	set-overflow	 list-unstyled  mt-2"style="margin:0px;padding:0px;" >
+<div class="row	mt-5 list-unstyled  mt-2"style="margin:0px;padding:0px;" >
+
+	@if(isset($all_popularcities))
 	@foreach($all_popularcities as $item)
 	<div class="col-md-6">
 		<a href="">
@@ -26,10 +32,19 @@
 		</a>
 	</div>
 	@endforeach
+
+<div class="row">
+	<div class="col-md-12">
+		{{ $all_popularcities->links() }}
+	</div>
+</div>
+
+	@else
+	<p>
+		No cities
+	</p>
+	@endif
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
+
 @endsection

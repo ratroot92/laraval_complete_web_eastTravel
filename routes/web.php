@@ -624,9 +624,31 @@ Route::get('/gallery/all_photos', 'ahmed\GalleryController@all_photos')->name('g
 Route::get('/gallery/delete/photo/{id}', 'ahmed\GalleryController@delete_photo')->name('gallery.del.photo');
 Route::get('/gallery/edit_view/photo/{id}', 'ahmed\GalleryController@editview_photo')->name('gallery.editview.photo');
 Route::post('/gallery/edit/photo/', 'ahmed\GalleryController@edit_photo')->name('gallery.edit.photo');
+
+// Add Traveller Reviews
+Route::get('/gallery/add/travellerReviews', 'ahmed\GalleryController@addTravellerReviewGET')->name('gallery.add.traveller.review')->middleware(SessionCheck::class);
+Route::post('/gallery/add/travellerReviews', 'ahmed\GalleryController@addTravellerReviewPOST')->name('gallery.add.traveller.review')->middleware(SessionCheck::class);
+Route::get('/gallery/all/travellerReviews', 'ahmed\GalleryController@allTravellerReviewGET')->name('gallery.all.traveller.review')->middleware(SessionCheck::class);
+Route::get('/gallery/update/travellerReviews/{id}', 'ahmed\GalleryController@updateTravellerReviewGET')->name('gallery.update.traveller.review.get')->middleware(SessionCheck::class);
+Route::post('/gallery/update/travellerReviews', 'ahmed\GalleryController@updateTravellerReviewPOST')->name('gallery.update.traveller.review')->middleware(SessionCheck::class);
+Route::get('/gallery/delete/travellerReviews/{id}', 'ahmed\GalleryController@deleteTravellerReviewGET')->name('gallery.update.traveller.review.delete')->middleware(SessionCheck::class);
+Route::get('/gallery/travellerReviews', 'ahmed\GalleryController@galleryTravellerReviewGET')->name('gallery.traveller.review');
+
+// End Traveller Reviews
+//Add group photos
+Route::get('/gallery/add/groupPhoto', 'ahmed\GalleryController@addGroupPhotoGET')->name('gallery.add.group.photo.get')->middleware(SessionCheck::class);
+Route::post('/gallery/add/groupPhoto', 'ahmed\GalleryController@addGroupPhotoPOST')->name('gallery.add.group.photo.post')->middleware(SessionCheck::class);
+Route::get('/gallery/all/groupPhoto', 'ahmed\GalleryController@allGroupPhotoGET')->name('gallery.all.group.photo.get')->middleware(SessionCheck::class);
+Route::get('/gallery/delete/groupPhoto/{id}', 'ahmed\GalleryController@deleteGroupPhotoGET')->name('gallery.delete.group.photo.get')->middleware(SessionCheck::class);
+Route::get('/gallery/update/groupPhoto/{id}', 'ahmed\GalleryController@updateGroupPhotoGET')->name('gallery.update.group.photo.get')->middleware(SessionCheck::class);
+Route::post('/gallery/update/groupPhoto', 'ahmed\GalleryController@updateGroupPhotoPOST')->name('gallery.update.group.photo.post')->middleware(SessionCheck::class);
+Route::get('/gallery/update/groupPhoto', 'ahmed\GalleryController@indexGroupPhotoPOST')->name('gallery.index.group.photo.get');
+//End Group photos
+
 //services page routes
 Route::get('services/index', 'ahmed\ServiceController@index')->name('services.get.index');
 Route::get('admin/services/add', 'ahmed\ServiceController@admin_index')->name('admin.get.index');
+
 //admin services
 Route::get('admin/services/view/vision', 'ahmed\ServiceController@view_vision')->name('services.view.vision');
 Route::post('admin/services/add/service', 'ahmed\ServiceController@add_service')->name('services.add.service');

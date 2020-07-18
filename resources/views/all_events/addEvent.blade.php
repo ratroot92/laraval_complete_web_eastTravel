@@ -405,7 +405,7 @@
                                     <input type="text" class="validate" placeholder="Vienna  " id="startloc"
                                         name="startloc" required="required" value="{{$Event->start_location ?? ''}}" />
                                     @endif
-                                    <label for="startloc">Start In /End In</label>
+                                    <label for="startloc">Start In </label>
                                 </div>
                             </div>
 
@@ -413,13 +413,13 @@
                             <div class="row">
                                 <div class="input-field col s12 font-weight-bold">
                                     @if($action=="addEvent")
-                                    <input type="text" class="validate" placeholder="Vienna / Vienna " id="endloc"
-                                        name="endloc" required="required" />
+                                    <input type="text" class="validate" placeholder="Paris " id="endloc" name="endloc"
+                                        required="required" />
                                     @else
-                                    <input type="text" class="validate" placeholder="Vienna / Vienna " id="endloc"
-                                        name="endloc" required="required" value="{{$Event->end_location ?? ''}}" />
+                                    <input type="text" class="validate" placeholder="Paris  " id="endloc" name="endloc"
+                                        required="required" value="{{$Event->end_location ?? ''}}" />
                                     @endif
-                                    <label for="endloc">Start In /End In</label>
+                                    <label for="endloc">Start In </label>
                                 </div>
                             </div>
 
@@ -987,10 +987,13 @@
                                 <div class="input-field col s12 font-weight-bold">
                                     <select name="status" id="status" class="validate" required="required">
                                         <option value="">Select Status</option>
-
+                                        @if($action="addEvent")
+                                        <option value="0">In-active</option>
+                                        <option value="1">Active</option>
+                                        @else
                                         <option @if($Event->status == 0) selected @endif value="0">In-active</option>
                                         <option @if($Event->status == 1) selected @endif value="1">Active</option>
-
+                                        @endif
                                     </select>
                                     <label for="status">Activity Status </label>
                                 </div>

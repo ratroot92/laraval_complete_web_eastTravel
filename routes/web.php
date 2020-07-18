@@ -668,3 +668,5 @@ Route::post('view_add_event', 'Event_Controller@addEvent')->name('view.add.event
 Route::get('view_update_event/{action}/{id}', 'Event_Controller@viewupdateEvent')->name('view.update.event')->middleware(SessionCheck::class);
 Route::post('view_update_event', 'Event_Controller@updateEvent')->name('view.update.event.post')->middleware(SessionCheck::class);
 Route::get('view_all_event', 'Event_Controller@allEvents')->name('view.all.events')->middleware(SessionCheck::class);
+Route::get('delete_event/{id}', 'Event_Controller@deleteEvent')->name('delete.event')->middleware(SessionCheck::class);
+Route::get('event_detail/{id}', 'Event_Controller@eventDetail')->name('event.detail')->middleware(SessionCheck::class);
